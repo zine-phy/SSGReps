@@ -73,8 +73,8 @@ class ssgGroup:  # ssg group
         QRot = ssg_dic['QRotC']
         QTau = ssg_dic['QTauC']
         URot = ssg_dic['URot'][0]
-        print_matlist(URot)
-        print_matlist(QTau)
+        # print_matlist(URot)
+        # print_matlist(QTau)
         uni = uni_or_anti(ssg_dic)
         if uni[0] == -1:
             A_spin = uni[1]
@@ -498,7 +498,7 @@ class LittleGroup:  # little group at a special k point
                 if t < 0:
                     self.antiunitary = True
         self.oplist = kop_list
-        print(kop_list)
+        # print(kop_list)
     
     def k_op(self):
         def identity_kpoint(kpoint, r, t, pure_t):
@@ -778,7 +778,7 @@ class LittleGroup:  # little group at a special k point
         if self.need_beautify:
             correp_matrix = []
             # print('#################################################')
-            print(self.ssgNum)
+            # print(self.ssgNum)
             for i in range(rep_num):
                 if rep_degree[i] > 1:
                     # print('dim:', rep_degree[i], 'torsion:', torsion[i])
@@ -834,7 +834,7 @@ class LittleGroup:  # little group at a special k point
                     break
         subgroups = non_diagonal_subgroups
         subgroups.append([0])
-        print('subgroup', subgroups)
+        # print('subgroup', subgroups)
         torsion =self.torsion[repnum]
         # if torsion != 1 , can first do H block first
         if torsion > 1.1:
@@ -912,7 +912,7 @@ class LittleGroup:  # little group at a special k point
                 replist = new
                 H_sum1 = np.zeros((degree, degree))
                 H_sum2 = np.zeros((degree, degree))
-                print('subgroup choose:', [q+1 for q in subgroup_use])
+                # print('subgroup choose:', [q+1 for q in subgroup_use])
                 # find the quotient group degree g/2
                 for i, rep in enumerate(replist):
                     if i in subgroup_use:
@@ -956,9 +956,9 @@ class LittleGroup:  # little group at a special k point
             eigenvectors = eigenvectors[:,idx]
             repetitions_new = cal_repetitions(eigenvalues, 1e-3)
             # self.repetitions = repetitions_new
-            print('repetitions and eigenvales', repetitions_new, eigenvalues)
+            # print('repetitions and eigenvales', repetitions_new, eigenvalues)
             # self.repetitions[repnum] = repetitions_new
-            print('old repetitions:', repetitions)
+            # print('old repetitions:', repetitions)
             subgroup_old = subgroup_use
             if len(repetitions) == len(repetitions_new):
                 subgroup_index = subgroup_index + 1
@@ -1028,7 +1028,7 @@ class LittleGroup:  # little group at a special k point
 
         def solve_factor_torsion_1(replist, time_reversal, degree):
             factors = np.zeros(degree, dtype=complex)
-            print(factors)
+            # print(factors)
             factors[0] = 1
             for ifactor in range(degree - 1):
                 factors[ifactor + 1] = find_position(1, ifactor+1,  0, replist, time_reversal)
@@ -1470,8 +1470,8 @@ class LittleGroup:  # little group at a special k point
             ai = ai + (part1 + part2)/(degree)
         aii = round(abs(ai))
         assert norm(aii - ai)< 1e-5
-        print('the number of independent matrices from formula:')
-        print(aii)
+        # print('the number of independent matrices from formula:')
+        # print(aii)
         # return aii
     
     # def common_null_space(self):
@@ -1485,8 +1485,8 @@ class LittleGroup:  # little group at a special k point
         # print_matlist(Sn)
         Ssn = np.vstack(Sn)  
         nullspace = null_space(Ssn)
-        print('the number of independent matrices from solving nullspace:')
-        print(np.size(nullspace, 1))
+        # print('the number of independent matrices from solving nullspace:')
+        # print(np.size(nullspace, 1))
         # change the bases WT:
         anti_index = self.anti_index
         mt0 = correp[anti_index]
@@ -1570,8 +1570,17 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
     if 1:
         print('k vector:', kvec)
         ssglg = load_little_group(ssgnum, kvec, need_beautify, sd, a)
-        print_matlist(ssglg.rotC)
-        print_matlist(ssglg.spin)
+        for irotlg, rotlg in enumerate(ssglg.rotC):
+            print(irotlg+1, ' th operation:  space rotation  spin rotation translation')
+            print_mat(rotlg)
+            print_mat(ssglg.spin[irotlg])
+            
+        # print('Space rotations:')
+        # print_matlist(ssglg.rotC)
+        # print('Spin rotations:')
+        # print_matlist(ssglg.spin)
+        # print('Translations:')
+        # print
         rep_degree = ssglg.rep_degree
         rep_num = len(rep_degree)
         # print('the su2 factor part')
@@ -1585,6 +1594,7 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
             print(rep_degree)
         # print_matlist(ssglg.spin)
         if out == 'charactor':
+            print('representation charactors:')
             for I in range(rep_num):
                 print(f'{I+1}th:')
                 print('torsion:', ssglg.torsion[I])
@@ -1597,6 +1607,7 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
                     else:
                         print(f'{ic+1} {real_part}{imag_part}*i')
         if out == 'rep_matrix':
+            print('representations:')
             for i in range(rep_num):
                 print(i+1,'th:')
                 print_matlist(ssglg.correp_matrix[i])
@@ -1616,6 +1627,10 @@ def main():
     kx, ky, kz = args.kp
     single = args.groupType
     out = args.out
+    if single not in [1,2]:
+        raise ValueError('Group type can only be 1(single group) or 2(double group)')
+    if out not in ['charactor', 'rep_degree', 'rep_matrix']:
+        raise ValueError('wrong out Vaule , can only be charactor, rep_matrix, rep_degree (default: charactor)')
     
     load_one_ssg_kvec(ssgNum, np.array([kx, ky, kz]), single=single, out=out)
 

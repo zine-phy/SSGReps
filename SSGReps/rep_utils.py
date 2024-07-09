@@ -198,6 +198,29 @@ def print_matlist(matlist):
         print_mat(mat)
 
 
+def print_tau(mat):
+    dim = np.shape(mat)[0]
+
+    for row in range(dim):
+        strg += '[ '
+        if 1:
+            num = mat[row]
+            if abs(num) < 1e-8:
+                strg += '     0      '
+            elif abs(num.real) < 1e-8:
+                strg += ' %4.3f *I ' % (num.imag)
+            elif abs(num.imag) < 1e-8:
+                strg += ' %4.3f ' % (num.real)
+            else:
+                strg += ' (%4.3f + %4.3f *I) ' % (num.real, num.imag)
+        strg += ' ]\n'
+
+def print_taulist(matlist):
+    for cnt,mat in enumerate(matlist):
+        print(cnt+1,':')
+        print_tau(mat)
+
+
 def generate_random_matrix(g):
     # Generate a g x g matrix with random numbers in the range [1, 6]
     if g == 2:
