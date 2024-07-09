@@ -28,10 +28,9 @@ This Python program can be used to compute representations of Spin-Space Groups 
 
 Run the main program `SSGReps.py`:
 
-    ```bash
+
     python SSGReps.py --ssgNum 194.1.6.1.P --kp 0 0 0.5 --out rep_matrix --groupType 1 > ssgrep.out
     python SSGReps.py --ssgNum 194.1.6.1.P --kp 0 0 0.5 > ssgrep.out
-    ```
 
 ### Parameters
 
