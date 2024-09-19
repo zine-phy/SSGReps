@@ -1086,7 +1086,7 @@ class LittleGroup:  # little group at a special k point
                     return i
 
         def Dh_to_replist_torsion_2(Dh_list, Dh_degree, time_reversal, mul_table, factor_table):
-            print(Dh_list, Dh_degree)
+            # print(Dh_list, Dh_degree)
             find_diagonal = False
             for ia, itt in enumerate(time_reversal):
                 if itt < 0 and not find_diagonal:
@@ -1120,7 +1120,7 @@ class LittleGroup:  # little group at a special k point
             for i in range(len(time_reversal)// 2):
                 index_need = i + len(time_reversal)//2
                 h_need = find_multiplier(anti_index, index_need, mul_table)
-                print(h_need)
+                # print(h_need)
                 U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
                 new_rep_list.append(U_anti)
             return new_rep_list
@@ -1578,6 +1578,7 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
             print(irotlg+1, ' th operation:  space rotation  spin rotation translation')
             print_mat(rotlg)
             print_mat(ssglg.spin[irotlg])
+            print(ssglg.tauC[irotlg])
             
         # print('Space rotations:')
         # print_matlist(ssglg.rotC)
