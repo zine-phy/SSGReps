@@ -57,7 +57,7 @@ class ssgGroup:  # ssg group
 
     def load_ssg(self, ssg_dic):
         def uni_or_anti(ssg_dic):
-            URot = ssg_dic['URot'][0]
+            URot = ssg_dic['URot'][-1]
             QRot = ssg_dic['QRotC']
             QTau = ssg_dic['QTauC']
             uni = 1 # -1 if anti-unitary
@@ -72,7 +72,7 @@ class ssgGroup:  # ssg group
         HTau = ssg_dic['HTauC']
         QRot = ssg_dic['QRotC']
         QTau = ssg_dic['QTauC']
-        URot = ssg_dic['URot'][0]
+        URot = ssg_dic['URot'][-1]
         # print_matlist(URot)
         # print_matlist(QTau)
         uni = uni_or_anti(ssg_dic)
@@ -148,7 +148,7 @@ class ssgGroup:  # ssg group
         HTau = ssg_dic['HTauC']
         QRot = ssg_dic['QRotC']
         QTau = ssg_dic['QTauC']
-        URot = ssg_dic['URot'][0]
+        URot = ssg_dic['URot'][-1]
         # uni = uni_or_anti(ssg_dic)
         # assert uni[0] == -1
         # A_spin = uni[1]
@@ -227,7 +227,7 @@ class ssgGroup:  # ssg group
         HTau = ssg_dic['HTauC']
         QRot = ssg_dic['QRotC']
         QTau = ssg_dic['QTauC']
-        URot = ssg_dic['URot'][0]
+        URot = ssg_dic['URot'][-1]
         # uni = uni_or_anti(ssg_dic)
         # assert uni[0] == -1
         # A_spin = uni[1]
@@ -1086,6 +1086,7 @@ class LittleGroup:  # little group at a special k point
                     return i
 
         def Dh_to_replist_torsion_2(Dh_list, Dh_degree, time_reversal, mul_table, factor_table):
+            print(Dh_list, Dh_degree)
             find_diagonal = False
             for ia, itt in enumerate(time_reversal):
                 if itt < 0 and not find_diagonal:
@@ -1111,7 +1112,7 @@ class LittleGroup:  # little group at a special k point
             uni_rep_list = []
             for ir, rep in enumerate(time_reversal):
                 if time_reversal[ir] > 0:
-                    Uh = np.block([[Dh_list[ir], np.zeros((Dh_degree,Dh_degree))], [np.zeros((Dh_degree,Dh_degree)), Eh_list[ir]]])
+                    Uh = np.block([[Dh_list[ir], np.zeros((Dh_degree,Dh_degree))], [np.zeros((Dh_degree,Dh_degree)), np.conj(Eh_list[ir])]])
                     new_rep_list.append(Uh)
                     uni_rep_list.append(Uh)
             # finish the unitary part
@@ -1119,7 +1120,8 @@ class LittleGroup:  # little group at a special k point
             for i in range(len(time_reversal)// 2):
                 index_need = i + len(time_reversal)//2
                 h_need = find_multiplier(anti_index, index_need, mul_table)
-                U_anti = U_a @ np.conj(uni_rep_list[h_need])
+                print(h_need)
+                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
                 new_rep_list.append(U_anti)
             return new_rep_list
         
@@ -1127,9 +1129,10 @@ class LittleGroup:  # little group at a special k point
         def get_Dh(replist, torsion, time_reversal, degree):
             assert torsion == 2 or torsion == 4
             Dh_list = []
-            for it in time_reversal:
-                if it > 0:
-                    Dh_list.append(replist[i][0:degree//2, 0:degree//2])
+            for it,tt in enumerate(time_reversal):
+                if tt > 0:
+                    Dh_list.append(replist[it][0:degree//2, 0:degree//2])
+            # print(Dh_list)
             Dh_list = solve_factor_unitary(Dh_list, degree//2)
             return Dh_list
         
@@ -1180,8 +1183,9 @@ class LittleGroup:  # little group at a special k point
                     uni_rep_list.append(np.array([[rep[0,0],0],[0,rep[0,0]]]))
                     new_rep_list.append(np.array([[rep[0,0],0],[0,rep[0,0]]]))
             Dt0 = np.array([[0,-1],[1,0]])
-            for rep in uni_rep_list:
-                new_rep_list.append(Dt0 @ np.conj(rep))
+            idt0 = len(time_reversal)//2
+            for irrep, rep in enumerate(uni_rep_list):
+                new_rep_list.append(mul_table[idt0, irrep] * Dt0 @ np.conj(rep))
             return new_rep_list
         
         # degree = 4, dim K = 2
@@ -1232,7 +1236,7 @@ class LittleGroup:  # little group at a special k point
             for i in range(len(time_reversal)// 2):
                 index_need = i + len(time_reversal)//2
                 h_need = find_multiplier(anti_index, index_need, mul_table)
-                U_anti = U_a @ np.conj(uni_rep_list[h_need])
+                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
                 new_rep_list.append(U_anti)
             return new_rep_list
         
@@ -1257,13 +1261,13 @@ class LittleGroup:  # little group at a special k point
                     break
             if not find_K:
                 return replist
-                ValueError('cant find K at torsion = 4')
+                # ValueError('cant find K at torsion = 4')
             anti_index = index_a
             U_a = np.block([[np.zeros((3,3)), -K], [K, np.zeros((3,3))]])
             for i in range(len(time_reversal)// 2):
                 index_need = i + len(time_reversal)//2
                 h_need = find_multiplier(anti_index, index_need, mul_table)
-                U_anti = U_a @ np.conj(uni_rep_list[h_need])
+                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
                 new_rep_list.append(U_anti)
             return new_rep_list
 
@@ -1297,7 +1301,7 @@ class LittleGroup:  # little group at a special k point
             for i in range(len(time_reversal)// 2):
                 index_need = i + len(time_reversal)//2
                 h_need = find_multiplier(anti_index, index_need, mul_table)
-                U_anti = U_a @ np.conj(uni_rep_list[h_need])
+                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
                 new_rep_list.append(U_anti)
             return new_rep_list
 
