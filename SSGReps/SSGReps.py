@@ -26,6 +26,7 @@ from sympy.matrices import Matrix
 from sympy.matrices import  eye,zeros
 from sympy.physics.quantum import TensorProduct
 import argparse
+import json
 
 class ssgGroup:  # ssg group
     def __init__(self, ssgNum, group_type):
@@ -440,6 +441,14 @@ def loadSsgGroup(ssgNum, kvec, group_type, ssg_dic):
     return ssg
 
 
+def convert_to_serializable(obj):
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    elif isinstance(obj, list):
+        return [convert_to_serializable(item) for item in obj]
+    return obj
+
+
 class LittleGroup:  # little group at a special k point
     def __init__(self, ssgNum, kvec, group_type, ssg_dic, need_beautify):
         self.ssg = loadSsgGroup(ssgNum, kvec, group_type, ssg_dic)
@@ -463,12 +472,42 @@ class LittleGroup:  # little group at a special k point
         self.factor = []
         self.regularRep = []
         self.rep_num = 0
-        self.charactor = []
-        self.linear_charactor = []
+        self.character = []
+        self.linear_character = []
         self.correp_matrix = []
         self.Wmatrix = []
         self.classes = []
         self.subgroup = []
+    
+    def to_dic_json(self):
+        return{
+            "ssgNum": self.ssgNum,
+            "kvec": convert_to_serializable(self.kvec),
+            "rotC": convert_to_serializable(self.rotC),
+            "spin": convert_to_serializable(self.spin),
+            "su2": convert_to_serializable(self.su2s),
+            "timeReversal": convert_to_serializable(self.time_reversal),
+            "tauC": convert_to_serializable(self.tauC),
+            "character": convert_to_serializable(self.character),
+            "repMatrix": convert_to_serializable(self.correp_matrix),
+            "torsion": convert_to_serializable(self.torsion),
+            "repDegree": convert_to_serializable(self.rep_degree)
+        }
+
+    def to_dic_npy(self):
+        return{
+            "ssgNum": self.ssgNum,
+            "kvec": self.kvec,
+            "rotC": self.rotC,
+            "spin": self.spin,
+            "su2": self.su2s,
+            "timeReversal": self.time_reversal,
+            "tauC": self.tauC,
+            "character": self.character,
+            "repMatrix": self.correp_matrix,
+            "torsion": self.torsion,
+            "repDegree": self.rep_degree
+        }
     
     def k_op1(self):
         def identity_kpoint(kpoint, r, t, pure_t):
@@ -620,7 +659,7 @@ class LittleGroup:  # little group at a special k point
             eigenvalues = eigenvalues[idx]
             eigenvectors = eigenvectors[:,idx]
             block_list = []
-            charactor = []
+            character = []
             repetitions = cal_repetitions(eigenvalues, tolerance = 0.0001)
             # print(repetitions)
             # print(eigenvalues)
@@ -632,29 +671,29 @@ class LittleGroup:  # little group at a special k point
                 if self.time_reversal[i] > 0:
                     block_rep = inv(eigenvectors) @ rep @ eigenvectors
                     block_list.append(block_rep)
-                    charactor.append(calculate_diagonal_sums(block_rep, repetitions))
+                    character.append(calculate_diagonal_sums(block_rep, repetitions))
                 else:
                     block_rep = inv(eigenvectors) @ rep @ np.conj(eigenvectors)
                     block_list.append(block_rep)
-                    # charactor.append(calculate_diagonal_sums(block_rep, repetitions))
+                    # character.append(calculate_diagonal_sums(block_rep, repetitions))
             # print_matlist(block_list)
-            # charactor only contains unitary part
-            charactor = np.array(charactor)
-            charactor = charactor.T
-            charactor_now = []
+            # character only contains unitary part
+            character = np.array(character)
+            character = character.T
+            character_now = []
             row_num = 0
             cor_rep_list =[]
-            def charactor_exist(charactor_now, ch):
-                if charactor_now == []:
+            def character_exist(character_now, ch):
+                if character_now == []:
                     return True
-                for i in charactor_now:
+                for i in character_now:
                     if norm(i - ch) < 1e-4:
                         return False
                 return True
             for r, rep in enumerate(repetitions):
                 # row_num = row_num + rep
-                if charactor_exist(charactor_now, charactor[r]):
-                    charactor_now.append(charactor[r])
+                if character_exist(character_now, character[r]):
+                    character_now.append(character[r])
                     cor_rep = []
                     for block_rep in block_list:
                         # print_mat(block_rep)
@@ -662,16 +701,16 @@ class LittleGroup:  # little group at a special k point
                         cor_rep.append(block_rep[row_num:row_num+rep,row_num:row_num+rep])
                     cor_rep_list.append(cor_rep)
                 row_num = row_num + rep
-            unitary_degree = np.size(charactor_now, 1)
-            linear_charactor = []
+            unitary_degree = np.size(character_now, 1)
+            linear_character = []
             k_conv = self.b1 * self.kvec[0] + self.b2 * self.kvec[1] + self.b3 * self.kvec[2]
-            for rep in charactor_now:
+            for rep in character_now:
                 ch = []
                 for uni in range(unitary_degree):
                     ch.append(rep[uni]* np.exp(-1j * np.dot(k_conv, self.tauC[uni])))
-                linear_charactor.append(ch)
-            # sort the charactor list 
-            n = np.size(charactor_now, 0)
+                linear_character.append(ch)
+            # sort the character list 
+            n = np.size(character_now, 0)
             def compare_ch(ch1, ch2):
                 # num_op = len(ch1)
                 for i,rep1 in enumerate(ch1):
@@ -688,47 +727,47 @@ class LittleGroup:  # little group at a special k point
                         return True
                     if rep1 < rep2 - 1e-3:
                         return False
-                ValueError('cant sort the charactor')
+                ValueError('cant sort the character')
 
 
             # for i in range(1, n):
             #     j = i
-            #     while j > 0 and compare_ch(charactor_now[indices[j]], charactor_now[indices[j - 1]]):
+            #     while j > 0 and compare_ch(character_now[indices[j]], character_now[indices[j - 1]]):
             #         indices[j], indices[j - 1] = indices[j - 1], indices[j]
             #         j -= 1
-            # sorted_indices = sorted(range(len(charactor_now)), key=lambda i: compare_ch(charactor_now[i], charactor_now[i-1]))
-            # sorted_indices = sorted(range(len(charactor_now)), key=lambda i: charactor_now[i])
+            # sorted_indices = sorted(range(len(character_now)), key=lambda i: compare_ch(character_now[i], character_now[i-1]))
+            # sorted_indices = sorted(range(len(character_now)), key=lambda i: character_now[i])
             # sorted_indices = indices
             sorted_indices = list(range(n))
             for i in range(n):
                 sortnum = 0
                 for j in range(n):
-                    ch1 = charactor_now[i]
+                    ch1 = character_now[i]
                     if not i == j:
-                        if compare_ch(ch1, charactor_now[j]):
+                        if compare_ch(ch1, character_now[j]):
                             sortnum += 1
                 sorted_indices[sortnum] = i
                 
 
             # print(sorted_indices)
-            charactor = [charactor_now[i] for i in sorted_indices]
+            character = [character_now[i] for i in sorted_indices]
             correp_matrix = [cor_rep_list[i] for i in sorted_indices]
-            linear_charactor = [linear_charactor[i] for i in sorted_indices]
-            rep_num = np.size(charactor, 0)
+            linear_character = [linear_character[i] for i in sorted_indices]
+            rep_num = np.size(character, 0)
             rep_degree = []
-            for ch in charactor:
+            for ch in character:
                 rep_degree.append(int(round(np.real(ch[0]))))
                 if int(round(np.real(ch[0]))) > 9:
                     print(self.ssgNum)
                     print('degree:', int(round(np.real(ch[0]))))
             self.rep_num = rep_num
             self.rep_degree = rep_degree
-            self.charactor = charactor
+            self.character = character
             self.correp_matrix = correp_matrix
-            self.linear_charactor = linear_charactor
+            self.linear_character = linear_character
             torsion = []
             if self.antiunitary:
-                for ch in charactor:
+                for ch in character:
                     tor = 0
                     for i, time in enumerate(self.time_reversal):
                         if time > 0:
@@ -738,13 +777,13 @@ class LittleGroup:  # little group at a special k point
                     torsion.append(int(np.round(np.real(tor))))
             # if unitary, we define its torsion as 0
             else:
-                for ch in charactor:
+                for ch in character:
                     torsion.append(0)
             self.torsion = torsion
             # now check the irreducibility
             if_all = []
             if self.antiunitary:
-                for ch in charactor:
+                for ch in character:
                     sum_ch = 0
                     for i in range(unitary_degree):
                         kappa1 = ch[i] * np.conj(ch[i])
@@ -756,7 +795,7 @@ class LittleGroup:  # little group at a special k point
                     if abs(sum_ch - 1) > 1e-2:
                         if_all.append(1)
             else:
-                for ch in charactor:
+                for ch in character:
                     sum_ch = 0
                     for i in range(unitary_degree):
                         kappa1 = ch[i] * np.conj(ch[i])
@@ -1425,7 +1464,7 @@ class LittleGroup:  # little group at a special k point
         self.eta_0 = self.factor[anti_index, anti_index]
         self.hT_index = self.mul_table[0: anti_index, anti_index]
         Fh = []
-        rep_num = np.size(self.charactor,0)
+        rep_num = np.size(self.character,0)
         # print(rep_num)
         for rep in range(rep_num):
             fhh = []
@@ -1463,8 +1502,8 @@ class LittleGroup:  # little group at a special k point
         correp = self.correp_matrix[rep_num]
         ai = 0
         for uni in range(anti_index):
-            charactor_uni = np.trace(correp[uni])
-            part1 = abs(charactor_uni)* abs(charactor_uni) *np.trace(Dv[uni])
+            character_uni = np.trace(correp[uni])
+            part1 = abs(character_uni)* abs(character_uni) *np.trace(Dv[uni])
             index_hT = self.hT_index[uni] - 1
             omega = self.factor[index_hT, index_hT]
             kappa = correp[self.mul_table[index_hT, index_hT] -1]
@@ -1548,9 +1587,15 @@ def load_little_group(ssgNum, kvec, need_beautify , group_type, ssg_dic):
 #     check = Ssn @ solve1
 #     print(norm(check))
 
+class CustomEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        elif isinstance(obj, complex):
+            return {"real": obj.real, "imag": obj.imag}
+        return super().default(obj)
 
-
-def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
+def load_one_ssg_kvec(ssgnum, kvec, single, out ,fileType , optimize): # rep_degree character
     if single == 1:
         sd = 'single'
     else:
@@ -1561,19 +1606,32 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
     with open(file, 'rb') as f:
         ssg_list = pickle.load(f)
     ssgdic_list = []
+    find_ssg = 0
     for ssg in ssg_list:
         num = ssg['ssgNum']
         if ssg['ssgNum'] == ssgnum:
             a = ssg
+            find_ssg = 1
             break
+    if not find_ssg:
+        raise ValueError('not a valid SSG number in the database, please check the input SSG number.')
     Gid = int(ssgnum.split('.')[0])
-    need_beautify = 0
-    if out == out == 'rep_matrix':
-        need_beautify = 1
+    # need_beautify = 0
+    # if out == out == 'rep_matrix':
+    #     need_beautify = 1
     # kvec_dict = ssgkvec[Gid-1]
     if 1:
         print('k vector:', kvec)
-        ssglg = load_little_group(ssgnum, kvec, need_beautify, sd, a)
+        ssglg = load_little_group(ssgnum, kvec, optimize, sd, a)
+        # output json file
+        if fileType == 'json':
+            with open("output.json", "w", encoding="utf-8") as file:
+                json.dump(ssglg.to_dic_json(), file, cls=CustomEncoder, ensure_ascii=False, indent=4)
+        if fileType == 'npy':
+            np.save("output.npy", ssglg.to_dic_npy())
+            # to read npy: 
+            # loaded_data = np.load("output.npy", allow_pickle=True).item()
+            
         for irotlg, rotlg in enumerate(ssglg.rotC):
             print(irotlg+1, ' th operation:  space rotation  spin rotation translation')
             print_mat(rotlg)
@@ -1598,12 +1656,12 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
             print('repdgree is:')
             print(rep_degree)
         # print_matlist(ssglg.spin)
-        if out == 'charactor':
-            print('representation charactors:')
+        if out == 'character':
+            print('representation characters:')
             for I in range(rep_num):
                 print(f'{I+1}th:')
                 print('torsion:', ssglg.torsion[I])
-                ch = ssglg.linear_charactor[I]
+                ch = ssglg.linear_character[I]
                 for ic, chh in enumerate(ch):
                     real_part = f'{chh.real:+.5f}'
                     imag_part = f'{abs(chh.imag):+.5f}' #if chh.imag != 0 else '0.00000'
@@ -1619,25 +1677,58 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out): # rep_degree charactor
     return ssglg
 
 
+import argparse
+import numpy as np
+
 def main():
     parser = argparse.ArgumentParser(description='SSG Representation Program')
-    parser.add_argument('--ssgNum', type=str, help='SSG number')
-    parser.add_argument('--kp', nargs=3, type=float, help='k-point coordinates', metavar=('kx', 'ky', 'kz'))
-    parser.add_argument('--groupType', type=int, default=2, help='single(1) or double(2) group (default: 2)')
-    parser.add_argument('--out', type=str, default='charactor', help='Output type option, can be charactor, rep_matrix, rep_degree (default: charactor)')
+    parser.add_argument('--ssgNum', type=str, required=True, help='SSG number')
+    parser.add_argument('--kp', nargs=3, type=float, required=True, help='k-point coordinates as three floats', metavar=('kx', 'ky', 'kz'))
+    parser.add_argument('--groupType', type=int, default=2, help='Group type: 1 for single group, 2 for double group (default: 2)')
+    parser.add_argument('--out', type=str, default='character', help='Output type: character, rep_matrix, rep_degree (default: character)')
+    parser.add_argument('--fileType', type=str, default=None, help="Output file type: 'json', 'npy', or None (default: None)")
+    parser.add_argument('--optimize', type=bool, default=False, help="Optimize SSG representation matrices (default: False)")
+
+    try:
+        args = parser.parse_args()
+        
+        # Validate inputs
+        ssgNum = args.ssgNum
+        kx, ky, kz = args.kp
+        groupType = args.groupType
+        out = args.out
+        fileType = args.fileType
+        optimize = args.optimize
+
+        if groupType not in [1, 2]:
+            raise ValueError('Group type must be 1 (single group) or 2 (double group).')
+
+        if out not in ['character', 'rep_degree', 'rep_matrix']:
+            raise ValueError("Output type must be one of 'character', 'rep_matrix', or 'rep_degree'.")
+
+        if fileType not in [None, 'json', 'npy']:
+            raise ValueError("File type must be one of 'json', 'npy', or None.")
+
+        if not isinstance(optimize, bool):
+            raise ValueError("Optimize must be a boolean value (True or False).")
+
+        # Call the main function with parsed arguments
+        load_one_ssg_kvec(
+            ssgNum,
+            np.array([kx, ky, kz]),
+            single=groupType,
+            out=out,
+            fileType=fileType,  # Pass fileType to load_one_ssg_kvec
+            optimize=optimize   # Pass optimize to load_one_ssg_kvec
+        )
     
-    args = parser.parse_args()
-    
-    ssgNum = args.ssgNum
-    kx, ky, kz = args.kp
-    single = args.groupType
-    out = args.out
-    if single not in [1,2]:
-        raise ValueError('Group type can only be 1(single group) or 2(double group)')
-    if out not in ['charactor', 'rep_degree', 'rep_matrix']:
-        raise ValueError('wrong out Vaule , can only be charactor, rep_matrix, rep_degree (default: charactor)')
-    
-    load_one_ssg_kvec(ssgNum, np.array([kx, ky, kz]), single=single, out=out)
+    except ValueError as e:
+        print(f"Input error: {e}")
+        print("Use python SSGReps.py --help to see usage details.")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        print("Check your input and try again. Use python SSGReps.py --help for more information.")
+
 
 if __name__ == '__main__':
     main()
