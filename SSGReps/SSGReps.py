@@ -1664,7 +1664,7 @@ def load_one_ssg_kvec(ssgnum, kvec, single, out ,fileType , optimize): # rep_deg
                 ch = ssglg.linear_character[I]
                 for ic, chh in enumerate(ch):
                     real_part = f'{chh.real:+.5f}'
-                    imag_part = f'{abs(chh.imag):+.5f}' #if chh.imag != 0 else '0.00000'
+                    imag_part = f'{chh.imag:+.5f}' #if chh.imag != 0 else '0.00000'
                     if ic + 1 < 10:
                         print(f'{ic+1}  {real_part}{imag_part}*i')
                     else:
