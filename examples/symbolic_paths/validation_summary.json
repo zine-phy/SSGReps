@@ -1,0 +1,21 @@
+{
+  "ssg": "221.8.6.3",
+  "group_type": "double",
+  "line_count": 6,
+  "endpoint_count": 4,
+  "sampled_path_points": 42,
+  "exact_compatibility_tables": 12,
+  "line_corep_families": 16,
+  "all_coreps": 33,
+  "exact_matrix_products": 2024192,
+  "line_matrix_products": 41728,
+  "symbolic_phase_relations": 13568,
+  "source_commit": "97e839509ec1a7f08af68b047f75aad0c71468b7",
+  "max_errors": {
+    "physical_product_error": 7.536489501734129e-15,
+    "unitarity_error": 8.98526478567621e-16,
+    "native_character_error": 2.1762920114812466e-15,
+    "native_factor_error": 1.133107779529596e-15
+  },
+  "previous_16D_character_exact_match": true
+}

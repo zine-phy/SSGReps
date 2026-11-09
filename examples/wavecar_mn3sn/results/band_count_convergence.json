@@ -1,0 +1,17 @@
+{
+  "change": "NBANDS 64 -> 96; all other band settings and density fixed",
+  "stage_results": {
+    "probe": {
+      "passed_before": 254,
+      "passed_after": 255,
+      "blocks": 277,
+      "max_first60_energy_change_eV": 0.00016217098473436664
+    },
+    "bands": {
+      "passed_before": 329,
+      "passed_after": 335,
+      "blocks": 365,
+      "max_first60_energy_change_eV": 0.0020563165355120816
+    }
+  }
+}

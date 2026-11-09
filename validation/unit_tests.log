@@ -1,0 +1,12 @@
+test_cli_false_and_failure_exit_codes (test_regressions.ReleaseRegressions) ... ok
+test_corruption_is_rejected (test_regressions.ReleaseRegressions) ... ok
+test_json_and_npy_export_match_final_matrices (test_regressions.ReleaseRegressions) ... ok
+test_known_mixed_corepresentation_failure (test_regressions.ReleaseRegressions) ... ok
+test_kramers_square_and_optimization (test_regressions.ReleaseRegressions) ... ok
+test_numeric_html_never_claims_exactness (test_regressions.ReleaseRegressions) ... ok
+test_wide_matrix_roundtrip_and_nonmutation (test_regressions.ReleaseRegressions) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 8.735s
+
+OK

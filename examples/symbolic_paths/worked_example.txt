@@ -1,0 +1,9 @@
+Worked example: MR, k(t)=(1/2,1/2,t), branch r1 (dimension 4).
+g4 = [C2y_spin || I_space | (1,0,1)], a unitary spin-decorated translation.
+D_t(g4) = exp(-i*pi*t)/sqrt(2) *
+ [ [1,-1,0,0], [-1,-1,0,0], [0,0,1,-1], [0,0,-1,-1] ].
+Eigenvalues: +exp(-i*pi*t) and -exp(-i*pi*t), each twice.
+D_t(g4)^2 = exp(-2*i*pi*t) I4.
+This is one generator of the full irreducible 4D family, whose other generators
+and antiunitary operation are in analytic_generators.txt.
+The root and phase formula above was checked symbolically, not fitted.

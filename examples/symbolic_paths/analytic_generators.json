@@ -1,0 +1,5270 @@
+[
+  {
+    "path": "GX",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "-sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "-I"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 32,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "-sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "-sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "-I",
+        "0"
+      ],
+      [
+        "0",
+        "I"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 32,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "-sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "-sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "-I"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 32,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "-sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "-I",
+        "0"
+      ],
+      [
+        "0",
+        "I"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 32,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "dimension": 4,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "I"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "I",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "dimension": 4,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "-I",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "-I",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "dimension": 4,
+    "local_index_0based": 3,
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "dimension": 4,
+    "local_index_0based": 16,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "dimension": 4,
+    "local_index_0based": 32,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "-sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "-I"
+      ],
+      [
+        "-I",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "-I"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 8,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "-sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "-I"
+      ],
+      [
+        "-I",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "-I"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 8,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "I"
+      ],
+      [
+        "I",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "-I"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 8,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(2)*I/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "sqrt(2)/2",
+        "sqrt(2)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "I"
+      ],
+      [
+        "I",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 3,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "-I"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 8,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "dimension": 2,
+    "local_index_0based": 16,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "-sqrt(3)*I/3",
+        "-sqrt(6)/3"
+      ],
+      [
+        "sqrt(6)/3",
+        "sqrt(3)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(3)*I/3",
+        "sqrt(6)/6 + sqrt(2)*I/2"
+      ],
+      [
+        "-sqrt(6)/6 + sqrt(2)*I/2",
+        "sqrt(3)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 4,
+    "global_index_1based": 11,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "tau": [
+      0,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1/2 + sqrt(3)*I/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2 - sqrt(3)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 12,
+    "global_index_1based": 122,
+    "antiunitary": false,
+    "exponent_b": "4",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      0
+    ],
+    "C": [
+      [
+        "sqrt(6)*I/3",
+        "-sqrt(3)/3"
+      ],
+      [
+        "sqrt(3)/3",
+        "-sqrt(6)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "dimension": 2,
+    "local_index_0based": 24,
+    "global_index_1based": 218,
+    "antiunitary": true,
+    "exponent_b": "6",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      2
+    ],
+    "C": [
+      [
+        "sqrt(3)/3",
+        "sqrt(6)*I/3"
+      ],
+      [
+        "sqrt(6)*I/3",
+        "sqrt(3)/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "-sqrt(3)*I/3",
+        "-sqrt(6)/3"
+      ],
+      [
+        "sqrt(6)/3",
+        "sqrt(3)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(3)*I/3",
+        "sqrt(6)/6 + sqrt(2)*I/2"
+      ],
+      [
+        "-sqrt(6)/6 + sqrt(2)*I/2",
+        "sqrt(3)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 4,
+    "global_index_1based": 11,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "tau": [
+      0,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1/2 + sqrt(3)*I/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2 - sqrt(3)*I/2"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 12,
+    "global_index_1based": 122,
+    "antiunitary": false,
+    "exponent_b": "4",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      0
+    ],
+    "C": [
+      [
+        "-sqrt(6)*I/3",
+        "sqrt(3)/3"
+      ],
+      [
+        "-sqrt(3)/3",
+        "sqrt(6)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "dimension": 2,
+    "local_index_0based": 24,
+    "global_index_1based": 218,
+    "antiunitary": true,
+    "exponent_b": "6",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      2
+    ],
+    "C": [
+      [
+        "sqrt(3)/3",
+        "sqrt(6)*I/3"
+      ],
+      [
+        "sqrt(6)*I/3",
+        "sqrt(3)/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "dimension": 4,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "sqrt(3)*I/3",
+        "0",
+        "sqrt(6)/3",
+        "0"
+      ],
+      [
+        "0",
+        "-sqrt(3)*I/3",
+        "0",
+        "sqrt(6)*I/3"
+      ],
+      [
+        "-sqrt(6)/3",
+        "0",
+        "-sqrt(3)*I/3",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(6)*I/3",
+        "0",
+        "sqrt(3)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "dimension": 4,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(3)*I/3",
+        "0",
+        "sqrt(6)/6 - sqrt(2)*I/2",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(3)*I/3",
+        "0",
+        "-sqrt(2)/2 + sqrt(6)*I/6"
+      ],
+      [
+        "-sqrt(6)/6 - sqrt(2)*I/2",
+        "0",
+        "sqrt(3)*I/3",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(2)/2 + sqrt(6)*I/6",
+        "0",
+        "-sqrt(3)*I/3"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "dimension": 4,
+    "local_index_0based": 4,
+    "global_index_1based": 11,
+    "antiunitary": false,
+    "exponent_b": "2",
+    "spin": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "tau": [
+      0,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(3)*I/3",
+        "0",
+        "sqrt(6)/6 + sqrt(2)*I/2",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(3)*I/3",
+        "0",
+        "sqrt(2)/2 + sqrt(6)*I/6"
+      ],
+      [
+        "-sqrt(6)/6 - sqrt(2)*I/2",
+        "0",
+        "-1/2 - sqrt(3)*I/6",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(2)/2 + sqrt(6)*I/6",
+        "0",
+        "-1/2 + sqrt(3)*I/6"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "dimension": 4,
+    "local_index_0based": 12,
+    "global_index_1based": 122,
+    "antiunitary": false,
+    "exponent_b": "4",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "sqrt(3)*I/3",
+        "0",
+        "-sqrt(6)*I/3"
+      ],
+      [
+        "sqrt(3)*I/3",
+        "0",
+        "sqrt(6)/3",
+        "0"
+      ],
+      [
+        "0",
+        "-sqrt(6)/3",
+        "0",
+        "-sqrt(3)/3"
+      ],
+      [
+        "-sqrt(6)*I/3",
+        "0",
+        "sqrt(3)/3",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "dimension": 4,
+    "local_index_0based": 24,
+    "global_index_1based": 218,
+    "antiunitary": true,
+    "exponent_b": "6",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      2
+    ],
+    "C": [
+      [
+        "sqrt(3)/3",
+        "0",
+        "sqrt(6)*I/3",
+        "0"
+      ],
+      [
+        "0",
+        "-sqrt(3)/3",
+        "0",
+        "sqrt(6)/3"
+      ],
+      [
+        "sqrt(6)*I/3",
+        "0",
+        "sqrt(3)/3",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(6)/3",
+        "0",
+        "sqrt(3)/3"
+      ]
+    ]
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "0",
+        "I"
+      ],
+      [
+        "0",
+        "0",
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "-I",
+        "0",
+        "0"
+      ],
+      [
+        "-I",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-I"
+      ],
+      [
+        "-I",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "I",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 4,
+    "global_index_1based": 49,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      0,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 8,
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 16,
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "-I",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-I"
+      ],
+      [
+        "I",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "I",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "sqrt(2)/2",
+        "-sqrt(2)/2",
+        "0",
+        "0"
+      ],
+      [
+        "-sqrt(2)/2",
+        "-sqrt(2)/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "sqrt(2)/2",
+        "-sqrt(2)/2"
+      ],
+      [
+        "0",
+        "0",
+        "-sqrt(2)/2",
+        "-sqrt(2)/2"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 4,
+    "global_index_1based": 25,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      0,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "I",
+        "0",
+        "0"
+      ],
+      [
+        "-I",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-I"
+      ],
+      [
+        "0",
+        "0",
+        "I",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 8,
+    "global_index_1based": 50,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "-1/2 - I/2",
+        "-1/2 - I/2",
+        "0",
+        "0"
+      ],
+      [
+        "1/2 + I/2",
+        "-1/2 - I/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1/2 + I/2",
+        "-1/2 + I/2"
+      ],
+      [
+        "0",
+        "0",
+        "1/2 - I/2",
+        "-1/2 + I/2"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 16,
+    "global_index_1based": 98,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 32,
+    "global_index_1based": 194,
+    "antiunitary": true,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      2
+    ],
+    "C": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "dimension": 4,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "dimension": 4,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "-sqrt(2)/2",
+        "sqrt(2)/2",
+        "0",
+        "0"
+      ],
+      [
+        "sqrt(2)/2",
+        "sqrt(2)/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-sqrt(2)/2",
+        "sqrt(2)/2"
+      ],
+      [
+        "0",
+        "0",
+        "sqrt(2)/2",
+        "sqrt(2)/2"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "dimension": 4,
+    "local_index_0based": 4,
+    "global_index_1based": 25,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      0,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "I",
+        "0",
+        "0"
+      ],
+      [
+        "-I",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-I"
+      ],
+      [
+        "0",
+        "0",
+        "I",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "dimension": 4,
+    "local_index_0based": 8,
+    "global_index_1based": 50,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "1/2 + I/2",
+        "1/2 + I/2",
+        "0",
+        "0"
+      ],
+      [
+        "-1/2 - I/2",
+        "1/2 + I/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/2 - I/2",
+        "1/2 - I/2"
+      ],
+      [
+        "0",
+        "0",
+        "-1/2 + I/2",
+        "1/2 - I/2"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "dimension": 4,
+    "local_index_0based": 16,
+    "global_index_1based": 98,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "dimension": 4,
+    "local_index_0based": 32,
+    "global_index_1based": 194,
+    "antiunitary": true,
+    "exponent_b": "2",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "R": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "tau": [
+      2,
+      2,
+      2
+    ],
+    "C": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ]
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 1,
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      1,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "sqrt(2)*I/2",
+        "0",
+        "sqrt(2)*I/2"
+      ],
+      [
+        "-sqrt(2)*I/2",
+        "0",
+        "-sqrt(2)*I/2",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(2)*I/2",
+        "0",
+        "-sqrt(2)*I/2"
+      ],
+      [
+        "-sqrt(2)*I/2",
+        "0",
+        "sqrt(2)*I/2",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 2,
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "exponent_b": "1",
+    "spin": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "sqrt(2)*I/2",
+        "0",
+        "-sqrt(2)*I/2"
+      ],
+      [
+        "-sqrt(2)*I/2",
+        "0",
+        "sqrt(2)*I/2",
+        "0"
+      ],
+      [
+        "0",
+        "-sqrt(2)*I/2",
+        "0",
+        "-sqrt(2)*I/2"
+      ],
+      [
+        "sqrt(2)*I/2",
+        "0",
+        "sqrt(2)*I/2",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 4,
+    "global_index_1based": 29,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "tau": [
+      1,
+      0,
+      0
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-I"
+      ],
+      [
+        "I",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-I",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 8,
+    "global_index_1based": 149,
+    "antiunitary": false,
+    "exponent_b": "0",
+    "spin": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ]
+    ],
+    "R": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "tau": [
+      2,
+      1,
+      -1
+    ],
+    "C": [
+      [
+        "0",
+        "0",
+        "I",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "I"
+      ],
+      [
+        "I",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "I",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "dimension": 4,
+    "local_index_0based": 16,
+    "global_index_1based": 245,
+    "antiunitary": true,
+    "exponent_b": "2",
+    "spin": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "tau": [
+      2,
+      1,
+      1
+    ],
+    "C": [
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    ]
+  }
+]

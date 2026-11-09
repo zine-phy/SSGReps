@@ -1,15 +1,11 @@
-from turtle import position
 import numpy as np
-from spglib import *
 from numpy.linalg import norm, inv, det
 import os
-from pymatgen.symmetry.analyzer import PointGroupAnalyzer
 import pickle
 import warnings
 
 from collections import OrderedDict
 
-from tqdm import tqdm
 from math import cos, sin, acos, asin, pi, sqrt, tan
 from SG_utils import *
 
@@ -260,7 +256,7 @@ def cal_repetitions(arr, tolerance):
     return repetitions
 
 def extract_submatrix(matrix, indices):
-    # 将行和列索引列表进行排序，以确保按顺序提取子矩阵
+    # Sort row and column indices to extract the submatrix in order.
     indices.sort()
     submatrix = matrix[np.ix_(indices, indices)]
     return submatrix

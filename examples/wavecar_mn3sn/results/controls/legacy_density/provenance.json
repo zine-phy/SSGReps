@@ -1,0 +1,73 @@
+{
+  "source_scf": "Mn3Sn/48ops/scf",
+  "source_fermi_eV": 6.1885,
+  "source_ediff": 5e-06,
+  "source_lmaxmix": 2,
+  "source_lasph": false,
+  "soc": false,
+  "path": [
+    "G",
+    "M",
+    "K",
+    "G",
+    "A",
+    "L",
+    "H",
+    "A"
+  ],
+  "path_tick_indices_zero_based": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105
+  ],
+  "path_point_count": 106,
+  "points": {
+    "G": [
+      0,
+      0,
+      0
+    ],
+    "M": [
+      0.5,
+      0,
+      0
+    ],
+    "K": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0
+    ],
+    "A": [
+      0,
+      0,
+      0.5
+    ],
+    "L": [
+      0.5,
+      0,
+      0.5
+    ],
+    "H": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.5
+    ],
+    "Q": [
+      0.137,
+      0.219,
+      0.317
+    ]
+  },
+  "hashes": {
+    "POSCAR": "515d78cd3abc3bbee023892cfd6496fb9f5fe6867e272a01916573a3e3152d64",
+    "POTCAR": "513405fb6b57720a7e01f6201bb6544ba03610c798d69b7e3d53336c1505caba",
+    "CHGCAR": "40b4202b44f2e47172ad254d47966e0d16356c050b7a46c38535edc30349dd41",
+    "INCAR": "72e0dbae6e7509db213ea34b7def45eaf40a5250b798433915d38b78ae89e813",
+    "OUTCAR": "4d844be7eff8190afd0593fdfcd46a4dd4da53113795a090d2452d43bcfb5b87"
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "input": [
+      0.7071067811865476,
+      0.0
+    ],
+    "status": "numeric_candidate",
+    "candidate": "sqrt(2)/2",
+    "exponential": "sqrt(2)/2",
+    "latex": "\\frac{\\sqrt{2}}{2}",
+    "residual": 0.0,
+    "tolerance": 1.7071067811865478e-10,
+    "certified_exact": false
+  },
+  {
+    "input": [
+      0.5,
+      0.8660254037844386
+    ],
+    "status": "numeric_candidate",
+    "candidate": "1/2 + sqrt(3)*I/2",
+    "exponential": "exp(I*pi/3)",
+    "latex": "e^{\\frac{i \\pi}{3}}",
+    "residual": 0.0,
+    "tolerance": 1.9999999999999998e-10,
+    "certified_exact": false
+  },
+  {
+    "input": [
+      -0.5,
+      0.8660254037844386
+    ],
+    "status": "numeric_candidate",
+    "candidate": "-1/2 + sqrt(3)*I/2",
+    "exponential": "exp(2*I*pi/3)",
+    "latex": "e^{\\frac{2 i \\pi}{3}}",
+    "residual": 0.0,
+    "tolerance": 1.9999999999999998e-10,
+    "certified_exact": false
+  },
+  {
+    "input": [
+      0.30618621784789724,
+      -0.30618621784789724
+    ],
+    "status": "numeric_candidate",
+    "candidate": "sqrt(6)*(1 - I)/8",
+    "exponential": "(sqrt(3)/4)*exp(-I*pi/4)",
+    "latex": "\\frac{\\sqrt{3}}{4} e^{- \\frac{i \\pi}{4}}",
+    "residual": 0.0,
+    "tolerance": 1.4330127018922194e-10,
+    "certified_exact": false
+  },
+  {
+    "input": [
+      0.123456789,
+      0.234567891
+    ],
+    "status": "unrecognized",
+    "candidate": null,
+    "exponential": null,
+    "latex": null,
+    "residual": 0.0008149576151484415,
+    "tolerance": 1.2650729602173303e-10,
+    "certified_exact": false
+  },
+  {
+    "input": [
+      0.15594369476537437,
+      0.9877659459927356
+    ],
+    "status": "unrecognized",
+    "candidate": null,
+    "exponential": null,
+    "latex": null,
+    "residual": 0.0004968682525771204,
+    "tolerance": 2e-10,
+    "certified_exact": false
+  },
+  {
+    "input": [
+      0.5,
+      0.866
+    ],
+    "status": "unrecognized",
+    "candidate": null,
+    "exponential": null,
+    "latex": null,
+    "residual": 2.5403784438604582e-05,
+    "tolerance": 1.9999779997579947e-10,
+    "certified_exact": false
+  }
+]

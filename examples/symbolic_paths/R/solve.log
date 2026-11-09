@@ -1,0 +1,6 @@
+order=384 H=192 irreps(dim,W)=[ [ 4, 0 ], [ 4, 0 ], [ 4, 0 ], [ 4, 0 ], 
+  [ 8, 0 ], [ 8, 0 ] ]
+PASS dimension=8 W=0 conductor=4 products=147456
+PASS dimension=8 W=0 conductor=4 products=147456
+PASS dimension=16 W=0 conductor=12 products=147456
+Finished 3 irreducible coreps; seconds=28.174

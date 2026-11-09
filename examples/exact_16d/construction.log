@@ -1,0 +1,17 @@
+Central extension order: 384; H generators: [ 2, 3, 4, 5, 97 ]
+Physical H irreps (dimension, Wigner index): [ [ 4, 0 ], [ 4, 0 ], [ 4, 0 ], 
+  [ 4, 0 ], [ 8, 0 ], [ 8, 0 ] ]
+Inducing from subgroup of order 32 into dimension 12.
+Restriction multiplicities: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ]
+Constructed exact 8D unitary-subgroup representation.
+8D field conductor: 12; entry count: 13
+Constructed unitary blocks.
+Constructed antiunitary blocks.
+Exact unitarity and irreducibility PASS. Verifying all 147456 products...
+All exact semilinear products PASS.
+Distinct entries: [ -1, -1/4, 0, 1/4, 1, -1/4*E(3)+1/4*E(3)^2, 
+  1/4*E(3)-1/4*E(3)^2, -E(4), -1/4*E(4), 1/4*E(4), E(4), 
+  -1/4*E(12)^7+1/4*E(12)^11, 1/4*E(12)^7-1/4*E(12)^11 ]
+Cyclotomic conductor: 12
+Total seconds: 23.73

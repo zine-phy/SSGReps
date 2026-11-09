@@ -1,0 +1,7 @@
+PASS GX dims [2, 2, 2, 2, 4] samples 7 seconds 0.6
+PASS GM dims [2, 2, 2, 2] samples 7 seconds 0.19
+PASS GR dims [2, 2, 4] samples 7 seconds 0.55
+PASS XM dims [4] samples 7 seconds 0.12
+PASS MR dims [4, 4] samples 7 seconds 0.51
+PASS XR dims [4] samples 7 seconds 0.14
+All path samples passed. The algebraic certificates prove every t in each open segment.

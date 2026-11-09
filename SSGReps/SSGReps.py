@@ -1,9 +1,6 @@
-from turtle import position
 import numpy as np
-from spglib import *
 from numpy.linalg import norm, inv, det
 import os
-from pymatgen.symmetry.analyzer import PointGroupAnalyzer
 import pickle
 import warnings
 import sys
@@ -12,7 +9,6 @@ import sys
 from collections import OrderedDict
 
 from itertools import combinations
-from tqdm import tqdm
 from math import cos, sin, acos, asin, pi, sqrt, tan, exp
 from rep_utils import *
 from SG_utils import *
@@ -336,73 +332,8 @@ class ssgGroup:  # ssg group
         self.b3 = b3
 
     def get_table(self):
-        def find_index(rot_new, tau_new, su2_new, t_new, space_rot, space_tau, su2_list, time_reversal, supercell, gid):
-            for i,rot in enumerate(space_rot):
-                tau = space_tau[i]
-                su2 = su2_list[i]
-                t = time_reversal[i]
-                if norm(rot_new - rot) < 1e-4 and abs(t - t_new) < 1e-5:
-                    id = identity_tau(tau_new, tau, supercell, gid)
-                    if id[0]:
-                        # print(rot_new, tau_new, su2_new)
-                        # print(rot,tau,su2)
-                        # print_matlist([su2, su2_new])
-                        # if not (norm(su2_new - su2) < 1e-4 or norm(su2_new + su2) < 1e-4):
-                        #     print_mat(su2_new)
-                        #     print(su2)
-                        # assert norm(su2_new - su2) < 1e-4 or norm(su2_new + su2) < 1e-4
-                        # if norm(su2_new - su2) < 1e-4:
-                        #     return [int(i+1), 1] 
-                        # else:
-                        #     return [int(i+1), -1] 
-                        if norm(su2_new - su2) < 1e-4 or norm(su2_new + su2) < 1e-4:
-                            # print_mat(su2_new)
-                            # print(su2)
-                            assert norm(su2_new - su2) < 1e-4 or norm(su2_new + su2) < 1e-4
-                            if norm(su2_new - su2) < 1e-4:
-                                return [int(i+1), 1] 
-                            else:
-                                return [int(i+1), -1] 
-            print('err of index')
-            ValueError('cant find index of multiple')
-        #
-        supercell = self.superCell
-        gid = self.Gid
-        space_rot = self.rotC
-        space_tau = self.tauC
-        spin = self.spin
-        su2 = self.su2s
-        time_reversal = self.time_reversal
-        degree = len(space_rot)
-        multiple_table = np.zeros((degree, degree))
-        factor_su2 = np.zeros((degree, degree), dtype=complex)
-        for i, rot1 in enumerate(space_rot):
-            tau1 = space_tau[i]
-            su2_1 = su2[i]
-            t1 = time_reversal[i]
-            for j, rot2 in enumerate(space_rot):
-                tau2 = space_tau[j]
-                su2_2 = su2[j]
-                t2 = time_reversal[j]
-                rot_new = rot1 @ rot2
-                tau_new = rot1 @ tau2 + tau1
-                # su2_new =  su2_1 @ su2_2
-                if t1 < 0:
-                    su2_new = su2_1 @ np.conj(su2_2)
-                else:
-                    su2_new =  su2_1 @ su2_2
-                t_new = t1 * t2
-                index = find_index(rot_new, tau_new, su2_new, t_new, space_rot, space_tau, su2, time_reversal, supercell, gid)
-                mul_index = index[0]
-                multiple_table[i][j] = mul_index
-                factor_su2[i][j] = index[1]
-                if self.group_type == 'single':
-                    factor_su2[i][j] = 1
-        # print_mat(factor_su2)
-        # print_mat(multiple_table)
-        self.mul_table = multiple_table
-        self.factor_su2 = factor_su2
-        # return multiple_table, factor_su2
+        from ssg_numeric import multiplication_table
+        self.mul_table, self.factor_su2 = multiplication_table(self)
 
     def get_trans_factor(self, kpoint):
         time_reversal = self.time_reversal
@@ -491,7 +422,13 @@ class LittleGroup:  # little group at a special k point
             "character": convert_to_serializable(self.character),
             "repMatrix": convert_to_serializable(self.correp_matrix),
             "torsion": convert_to_serializable(self.torsion),
-            "repDegree": convert_to_serializable(self.rep_degree)
+            "repDegree": convert_to_serializable(self.rep_degree),
+            "matrixConvention": "projective",
+            "characterConvention": "projective",
+            "linearCharacter": convert_to_serializable(self.linear_character),
+            "pureTranslations": convert_to_serializable(np.asarray(self.pure_T)),
+            "reciprocalBasis": convert_to_serializable(np.asarray([self.b1, self.b2, self.b3])),
+            "validation": self.validation
         }
 
     def to_dic_npy(self):
@@ -506,7 +443,13 @@ class LittleGroup:  # little group at a special k point
             "character": self.character,
             "repMatrix": self.correp_matrix,
             "torsion": self.torsion,
-            "repDegree": self.rep_degree
+            "repDegree": self.rep_degree,
+            "matrixConvention": "projective",
+            "characterConvention": "projective",
+            "linearCharacter": self.linear_character,
+            "pureTranslations": np.asarray(self.pure_T),
+            "reciprocalBasis": np.asarray([self.b1, self.b2, self.b3]),
+            "validation": self.validation
         }
     
     def k_op1(self):
@@ -549,7 +492,7 @@ class LittleGroup:  # little group at a special k point
             # k_new = t * R_supercell @ kpoint
             for tau in pure_t:
                 factor = 1 - np.exp( 1j * np.dot(k_conv, -tau + t * r @ tau))
-                if abs(factor) > 1e-3:
+                if abs(factor) > 1e-8:
                     return False
             return True
             # check = kpoint - k_new
@@ -578,10 +521,11 @@ class LittleGroup:  # little group at a special k point
                 if t < 0:
                     self.antiunitary = True
         # kop_list = [0, 1, 2, 3]
+        self.antiunitary = any(time_reversal[i] < 0 for i in kop_list)
         self.oplist = kop_list
         # print(kop_list)
     
-    def get_regular_rep_list(self):
+    def get_regular_rep_list(self, build_dense=True):
         def get_mul_table(table, op_list):
             # print(table)
             # print(op_list)
@@ -624,8 +568,9 @@ class LittleGroup:  # little group at a special k point
         new_trans_factor = extract_submatrix(ssg.factor_trans, k_op_list)
         self.mul_table = new_mul_table.astype(int)
         self.factor = np.multiply(new_factor_table, new_trans_factor)
-        for num, op_num in enumerate(k_op_list):
-            rep_list.append(regular_rep_from_table(new_mul_table, self.factor, num))
+        if build_dense:
+            for num, op_num in enumerate(k_op_list):
+                rep_list.append(regular_rep_from_table(new_mul_table, self.factor, num))
         # return rep_list, time_reversal
         self.regularRep = rep_list
         self.time_reversal = time_reversal
@@ -637,721 +582,18 @@ class LittleGroup:  # little group at a special k point
 
 
     def get_irreducible_rep(self):
-        check_ir = False
-        loop_num = 0
-        while not check_ir and loop_num < 5:
-            loop_num = loop_num + 1
-            replist = self.regularRep
-            degree = len(replist)
-            H = generate_random_matrix(degree)
-            H_sum = np.zeros((degree, degree))
-            # degree_half = degree / 2
-            # assert abs(degree_half - round(degree_half)) < 1e-4
-            # degree_half = int(round(degree_half)) 
-            for i, rep in enumerate(replist):
-                if self.time_reversal[i] > 0:
-                    H_sum = H_sum + rep @ H @ inv(rep)
-                else:
-                    H_sum = H_sum + rep @ np.conj(H) @ inv(rep)
-            H_hermitian = H_sum + np.conj(H_sum.T)
-            eigenvalues, eigenvectors = np.linalg.eigh(H_hermitian)
-            idx = eigenvalues.argsort()[::-1]   
-            eigenvalues = eigenvalues[idx]
-            eigenvectors = eigenvectors[:,idx]
-            block_list = []
-            character = []
-            repetitions = cal_repetitions(eigenvalues, tolerance = 0.0001)
-            # print(repetitions)
-            # print(eigenvalues)
-            # print('eigenvectors @ np.conj(eigenvectors.T)')
-            # print_mat(eigenvectors @ np.conj(eigenvectors.T))
-            assert np.sum(repetitions) == degree
-            # num_rep = len(repetitions)
-            for i, rep in enumerate(replist):
-                if self.time_reversal[i] > 0:
-                    block_rep = inv(eigenvectors) @ rep @ eigenvectors
-                    block_list.append(block_rep)
-                    character.append(calculate_diagonal_sums(block_rep, repetitions))
-                else:
-                    block_rep = inv(eigenvectors) @ rep @ np.conj(eigenvectors)
-                    block_list.append(block_rep)
-                    # character.append(calculate_diagonal_sums(block_rep, repetitions))
-            # print_matlist(block_list)
-            # character only contains unitary part
-            character = np.array(character)
-            character = character.T
-            character_now = []
-            row_num = 0
-            cor_rep_list =[]
-            def character_exist(character_now, ch):
-                if character_now == []:
-                    return True
-                for i in character_now:
-                    if norm(i - ch) < 1e-4:
-                        return False
-                return True
-            for r, rep in enumerate(repetitions):
-                # row_num = row_num + rep
-                if character_exist(character_now, character[r]):
-                    character_now.append(character[r])
-                    cor_rep = []
-                    for block_rep in block_list:
-                        # print_mat(block_rep)
-                        # print_mat(block_rep[row_num:row_num+rep,row_num:row_num+rep])
-                        cor_rep.append(block_rep[row_num:row_num+rep,row_num:row_num+rep])
-                    cor_rep_list.append(cor_rep)
-                row_num = row_num + rep
-            unitary_degree = np.size(character_now, 1)
-            linear_character = []
-            k_conv = self.b1 * self.kvec[0] + self.b2 * self.kvec[1] + self.b3 * self.kvec[2]
-            for rep in character_now:
-                ch = []
-                for uni in range(unitary_degree):
-                    ch.append(rep[uni]* np.exp(-1j * np.dot(k_conv, self.tauC[uni])))
-                linear_character.append(ch)
-            # sort the character list 
-            n = np.size(character_now, 0)
-            def compare_ch(ch1, ch2):
-                # num_op = len(ch1)
-                for i,rep1 in enumerate(ch1):
-                    rep2 = np.real(ch2[i])
-                    rep1 = np.real(rep1)
-                    if rep1 > rep2 + 1e-2:
-                        return True
-                    if rep1 < rep2 - 1e-2:
-                        return False
-                for i,rep1 in enumerate(ch1):
-                    rep2 = np.imag(ch2[i])
-                    rep1 = np.imag(rep1)
-                    if rep1 > rep2 + 1e-3:
-                        return True
-                    if rep1 < rep2 - 1e-3:
-                        return False
-                ValueError('cant sort the character')
-
-
-            # for i in range(1, n):
-            #     j = i
-            #     while j > 0 and compare_ch(character_now[indices[j]], character_now[indices[j - 1]]):
-            #         indices[j], indices[j - 1] = indices[j - 1], indices[j]
-            #         j -= 1
-            # sorted_indices = sorted(range(len(character_now)), key=lambda i: compare_ch(character_now[i], character_now[i-1]))
-            # sorted_indices = sorted(range(len(character_now)), key=lambda i: character_now[i])
-            # sorted_indices = indices
-            sorted_indices = list(range(n))
-            for i in range(n):
-                sortnum = 0
-                for j in range(n):
-                    ch1 = character_now[i]
-                    if not i == j:
-                        if compare_ch(ch1, character_now[j]):
-                            sortnum += 1
-                sorted_indices[sortnum] = i
-                
-
-            # print(sorted_indices)
-            character = [character_now[i] for i in sorted_indices]
-            correp_matrix = [cor_rep_list[i] for i in sorted_indices]
-            linear_character = [linear_character[i] for i in sorted_indices]
-            rep_num = np.size(character, 0)
-            rep_degree = []
-            for ch in character:
-                rep_degree.append(int(round(np.real(ch[0]))))
-                if int(round(np.real(ch[0]))) > 9:
-                    print(self.ssgNum)
-                    print('degree:', int(round(np.real(ch[0]))))
-            self.rep_num = rep_num
-            self.rep_degree = rep_degree
-            self.character = character
-            self.correp_matrix = correp_matrix
-            self.linear_character = linear_character
-            torsion = []
-            if self.antiunitary:
-                for ch in character:
-                    tor = 0
-                    for i, time in enumerate(self.time_reversal):
-                        if time > 0:
-                            tor = tor + abs(ch[i])**2
-                    tor = tor/degree * 2
-                    assert abs(tor - np.round(tor)) < 1e-3
-                    torsion.append(int(np.round(np.real(tor))))
-            # if unitary, we define its torsion as 0
-            else:
-                for ch in character:
-                    torsion.append(0)
-            self.torsion = torsion
-            # now check the irreducibility
-            if_all = []
-            if self.antiunitary:
-                for ch in character:
-                    sum_ch = 0
-                    for i in range(unitary_degree):
-                        kappa1 = ch[i] * np.conj(ch[i])
-                        # print(unitary_degree)
-                        kappa2_omega = self.factor[i+unitary_degree ,i+unitary_degree]
-                        kappa2_mul = ch[self.mul_table[i+unitary_degree, i+unitary_degree] - 1]
-                        sum_ch = sum_ch + (kappa1 + kappa2_mul * kappa2_omega)/(2*unitary_degree)
-                    # print(sum_ch)
-                    if abs(sum_ch - 1) > 1e-2:
-                        if_all.append(1)
-            else:
-                for ch in character:
-                    sum_ch = 0
-                    for i in range(unitary_degree):
-                        kappa1 = ch[i] * np.conj(ch[i])
-                        # print(unitary_degree)
-                        # kappa2_omega = self.factor[i+unitary_degree ,i+unitary_degree]
-                        # kappa2_mul = ch[self.mul_table[i+unitary_degree, i+unitary_degree] - 1]
-                        sum_ch = sum_ch + kappa1 /unitary_degree
-                    # print(sum_ch)
-                    if abs(sum_ch - 1) > 1e-2:
-                        if_all.append(1)
-            if 1 in if_all:
-                check_ir = False
-                print('retry!!')
-                if loop_num == 4:
-                    print('something wrong')
-            else:
-                check_ir = True
-        # beautify the representations
-        if self.need_beautify:
-            correp_matrix = []
-            # print('#################################################')
-            # print(self.ssgNum)
-            for i in range(rep_num):
-                if rep_degree[i] > 1:
-                    # print('dim:', rep_degree[i], 'torsion:', torsion[i])
-                    cc = self.beautify_rep_subgroups(i)
-                    
-                    # print_matlist(cc)
-                    # print('======================')
-                    correp_matrix.append(cc)
-                else:
-                    # print('1-dim representation.')
-                    # print('======================')
-                    # print_matlist(self.correp_matrix[i])
-                    correp_matrix.append(self.correp_matrix[i])
-            self.correp_matrix = correp_matrix
-
-        # solve factor or not
-        L_solve_factor = 1
-        if L_solve_factor:
-            correp_matrix = []
-            for i in range(rep_num):
-                cc = self.solve_factor(i)
-                correp_matrix.append(cc)
-
-            self.correp_matrix = correp_matrix
-
-
+        from ssg_numeric import reduce_regular
+        reduce_regular(self, seed=getattr(self, 'seed', 0))
 
     def beautify_rep_subgroups(self, repnum):
-        def are_all_elements_unique(arr, tolerance=1e-4):
-            n = len(arr)
-            for i in range(n-1):
-                if abs(arr[i] - arr[i+1]) < tolerance:
-                    return False
-            return True
-        def is_diagonal_matrix(matrix, threshold=1e-4):
-            rows, cols = matrix.shape
-            for i in range(rows):
-                for j in range(cols):
-                    if i != j and abs(matrix[i, j]) > threshold:
-                        return False
-            return True
-        # first let the H being the subgroup
-        # if all the representations of one subgroup is diagonal
-        degree = self.rep_degree[repnum]
-        subgroups = self.subgroup
-        # check the subgroup
-        replist = self.correp_matrix[repnum]
-        non_diagonal_subgroups = []
-        for subg in subgroups:
-            for iss, subg_element in enumerate(subg):
-                if not is_diagonal_matrix(replist[subg_element]):
-                    non_diagonal_subgroups.append(subg)
-                    break
-        subgroups = non_diagonal_subgroups
-        subgroups.append([0])
-        # print('subgroup', subgroups)
-        torsion =self.torsion[repnum]
-        # if torsion != 1 , can first do H block first
-        if torsion > 1.1:
-            subgroup_old = list(range(len(self.time_reversal)//2))
-            H = generate_random_matrix(degree)
-            H_sum = np.zeros((degree, degree))
-            # degree_half = degree / 2
-            # assert abs(degree_half - round(degree_half)) < 1e-4
-            # degree_half = int(round(degree_half)) 
-            replist = self.correp_matrix[repnum]
-            for i, rep in enumerate(replist):
-                if self.time_reversal[i] > 0:
-                    H_sum = H_sum + rep @ H @ inv(rep)
-            H_hermitian = H_sum + np.conj(H_sum.T)
-            eigenvalues, eigenvectors = np.linalg.eigh(H_hermitian)
-            idx = eigenvalues.argsort()[::-1]   
-            eigenvalues = eigenvalues[idx]
-            eigenvectors = eigenvectors[:,idx]
-            # this eigenvectors block the unitary part but the antiunitary part may still has random numbers
-            found  = 0      
-            new = []
-            for i in range(len(self.time_reversal)):
-                if self.time_reversal[i] > 0:
-                    new_rep = inv(eigenvectors) @ replist[i] @ eigenvectors
-                    new.append(new_rep)
-                else:
-                    if not found: # get the u1 factor to beautify the anti-unitary part
-                        anti_correp = inv(eigenvectors) @ replist[i] @ np.conj(eigenvectors)
-                        anti_correp = list(np.reshape(anti_correp, (degree**2, 1)))
-                        for num in anti_correp:
-                            if abs(num) > 1e-3:
-                                u1factor = np.sqrt(num)
-                                break
-                        found = 1
-                        eigenvectors = eigenvectors * u1factor
-                    new.append(inv(eigenvectors) @ replist[i] @ np.conj(eigenvectors))
-        else:
-            subgroup_old = [-1]
-            new = self.correp_matrix[repnum]
-            eigenvalues = np.zeros(degree, dtype=complex)
-        # use sar_all_elements_unique to justify if the function can return the representations
-        if are_all_elements_unique(eigenvalues):
-            return new
-        # use subgroups until the eigenvalus are all unique
-        subgroup_index = 0
-        def ainb(a, b):
-            for i in a:
-                if i not in b:
-                    return False
-            return True
-        def repetitions2matrix(repetitions):
-            degree = sum(repetitions)
-            if len(repetitions) == 1:
-                H = generate_random_matrix(degree)
-                return H
-            H = np.zeros((degree, degree), dtype= complex)
-            left = 0
-            for repe in repetitions:
-                right = left + repe
-                H[left:right, left:right] = generate_random_matrix(repe)
-                left = right
-            return H
-        subgroup_use = subgroups[subgroup_index]
+        """Compatibility wrapper for a safe unitary basis optimization."""
+        from ssg_numeric import sparse_basis
+        return sparse_basis(self.correp_matrix[repnum], self.time_reversal)
 
-        # while not are_all_elements_unique(eigenvalues):
-        while subgroup_use != [0]:
-            # subgroup_use = subgroups[subgroup_index]
-            repetitions = cal_repetitions(eigenvalues, 1e-3)
-            assert abs(sum(repetitions) - degree) < 1e-3
-            check2 = True
-            if 1:
-                check2 = False
-                H = repetitions2matrix(repetitions)
-                # print('random matrix', H)
-                replist = new
-                H_sum1 = np.zeros((degree, degree))
-                H_sum2 = np.zeros((degree, degree))
-                # print('subgroup choose:', [q+1 for q in subgroup_use])
-                # find the quotient group degree g/2
-                for i, rep in enumerate(replist):
-                    if i in subgroup_use:
-                        if self.time_reversal[i] > 0:
-                            H_sum1 = H_sum1 + rep @ H @ inv(rep)
-                        else:
-                            H_sum1 = H_sum1 + rep @ np.conj(H) @ inv(rep)
-                for i, rep in enumerate(replist):
-                    if i in subgroup_old:
-                        if self.time_reversal[i] > 0:
-                            H_sum2 = H_sum2 + rep @ H @ inv(rep)
-                        else:
-                            H_sum2 = H_sum2 + rep @ np.conj(H) @ inv(rep)
-                H_hermitian1 = H_sum1 + np.conj(H_sum1.T)
-                H_hermitian2 = H_sum2 + np.conj(H_sum2.T)
-                # eigenvalues1, eigenvectors1 = np.linalg.eigh(H_hermitian1)
-                # eigenvalues2, eigenvectors2 = np.linalg.eigh(100 * H_hermitian2)
-                # print(eigenvalues2)
-                # a = eigenvalues2[0]
-                # b = np.ptp(eigenvalues2)
-                # if b / a < 0.05 and :
-                #     check2 = True
-                # sorted_list = sorted(eigenvalues2)
-
-                # differences = [abs(sorted_list[i + 1] - sorted_list[i]) for i in range(len(sorted_list) - 1)]
-
-                # # min_difference = min(differences)
-                # max_diff = np.ptp(eigenvalues1) 
-                # print('max_diff', max_diff)
-                # for diff in differences:
-                #     if diff > 1e-2:
-                #         print
-                #         if diff < max_diff:
-                #             check2 = True
-                # if max_diff < min_difference:
-                #     check2 = False
-            H_hermitian = H_hermitian1 + 100000 * H_hermitian2
-            eigenvalues, eigenvectors = np.linalg.eigh(H_hermitian)
-            idx = eigenvalues.argsort()[::-1]   
-            eigenvalues = eigenvalues[idx]
-            eigenvectors = eigenvectors[:,idx]
-            repetitions_new = cal_repetitions(eigenvalues, 1e-3)
-            # self.repetitions = repetitions_new
-            # print('repetitions and eigenvales', repetitions_new, eigenvalues)
-            # self.repetitions[repnum] = repetitions_new
-            # print('old repetitions:', repetitions)
-            subgroup_old = subgroup_use
-            if len(repetitions) == len(repetitions_new):
-                subgroup_index = subgroup_index + 1
-                subgroup_use= subgroups[subgroup_index]
-            # elif are_all_elements_unique(eigenvalues):
-            #     return new
-            else:
-                new = []
-                for i in range(len(self.time_reversal)):
-                    if self.time_reversal[i] > 0:
-                        new_rep = inv(eigenvectors) @ replist[i] @ eigenvectors
-                        new.append(new_rep)
-                    else:
-                        new.append(inv(eigenvectors) @ replist[i] @ np.conj(eigenvectors))
-                # generate the new subgroups
-                if are_all_elements_unique(eigenvalues):
-                    return new
-                subgroups_new = []
-                for s in subgroups:
-                    if len(s) < len(subgroup_use) and ainb(s, subgroup_use):
-                        if not all(is_diagonal_matrix(new[ss]) for ss in s):
-                        # if 1:
-                            subgroups_new.append(s)
-                subgroups_new.append([0])
-                if subgroups_new == []:
-                    return new
-                subgroups = subgroups_new
-                subgroup_index = 0
-                subgroup_use = subgroups[subgroup_index]
-        return new
-                
-
-    # in this step, elements have been in the form of diagonal, only to solve factor and trun to the standard form
     def solve_factor(self, repnum):
-        def find_position(uni, pos1, pos2, replist, time_reversal):
-            for ir, rep in enumerate(replist):
-                if abs(uni - time_reversal[ir]) < 1e-3:
-                    position = rep[pos1, pos2]
-                    # aa = rep[pos1,:]
-                    # bb = rep[:,pos2]
-                    if abs(position) > 1e-2 and abs(abs(position)-1) < 1e-3:
-                        return position
-            print('cant find the position')
-            return 1
-            # ValueError('cant find non-zero')
+        """Compatibility no-op: independent entry rescaling is not a basis change."""
+        return np.array(self.correp_matrix[repnum], copy=True)
 
-        def find_position_unitary(pos1, pos2, replist):# just for the function solve_factor_unitary
-            for ir, rep in enumerate(replist):
-                if 1:
-                    position = rep[pos1, pos2]
-                    # aa = rep[pos1,:]
-                    # bb = rep[:,pos2]
-                    if abs(position) > 1e-2 and abs(abs(position)-1) < 1e-3:
-                        return position
-            print('cant find the position')
-            return 1
-            # ValueError('cant find non-zero')
-
-        # solve the factor of a n-degree diagonal form
-        def solve_factor_unitary(replist, degree):
-            factors = np.zeros(degree, dtype = complex)
-            factors[0] = 1
-            for ifactor in range(degree - 1):
-                factors[ifactor + 1] = find_position_unitary(ifactor+1,  0, replist)
-            factor_matrix = np.diag(factors)
-            return do_similar_transform(replist, [1]*1000, factor_matrix)
-
-        def solve_factor_torsion_1(replist, time_reversal, degree):
-            factors = np.zeros(degree, dtype=complex)
-            # print(factors)
-            factors[0] = 1
-            for ifactor in range(degree - 1):
-                factors[ifactor + 1] = find_position(1, ifactor+1,  0, replist, time_reversal)
-            factor_matrix = np.array(np.diag(factors))
-            # print('factor matrix')
-            # print(factor_matrix)
-            replist =  do_similar_transform(replist, time_reversal, factor_matrix)
-            alpha = find_position(-1, 0, 0, replist, time_reversal)
-            alpha = np.sqrt(alpha)
-            return do_similar_transform(replist, time_reversal, np.diag(np.array(degree * [alpha])))
-
-
-
-        def do_similar_transform(replist, time_reversal, factor):
-            new_rep_list = []
-            if np.size(factor, 0) == 1:
-                for ir, rep in enumerate(replist):
-                    if time_reversal[ir] > 0:
-                        new_rep_list.append(np.conj(factor) * rep * factor)
-                    else:
-                        new_rep_list.append(np.conj(factor) * rep * np.conj(factor))
-                return new_rep_list
-
-            for ir, rep in enumerate(replist):
-                if time_reversal[ir] > 0:
-                    new_rep_list.append(inv(factor) @ rep @ factor)
-                else:
-                    new_rep_list.append(inv(factor) @ rep @ inv(factor))
-            return new_rep_list
-
-        def find_index_class(a_index, h_index, mul_table):
-            # find the index of a^{-1} h a
-            degree = np.size(mul_table, 0)
-            for i in range(degree):
-                if mul_table[i, a_index] == 1:
-                    inverse_a = i
-                    break
-            a_inverse_h = mul_table[inverse_a, h_index] - 1
-            return mul_table[a_inverse_h, a_index] - 1
-        
-        def is_diagonal_matrix(matrix, threshold=1e-4):
-            rows, cols = matrix.shape
-            for i in range(rows):
-                for j in range(cols):
-                    if i != j and abs(matrix[i, j]) > threshold:
-                        return False
-            return True
-        
-        def find_multiplier(a, b, mul_table):
-            # find a * ? = b
-            # mul_a = mul_table[a,:]
-            degree = np.size(mul_table, 0)
-            for i in range(degree):
-                if b == mul_table[a, i] - 1:
-                    return i
-
-        def Dh_to_replist_torsion_2(Dh_list, Dh_degree, time_reversal, mul_table, factor_table):
-            # print(Dh_list, Dh_degree)
-            find_diagonal = False
-            for ia, itt in enumerate(time_reversal):
-                if itt < 0 and not find_diagonal:
-                    index_aa = mul_table[ia, ia] - 1
-                    if is_diagonal_matrix(Dh_list[index_aa]):
-                        U_a = np.block([[np.zeros((Dh_degree,Dh_degree)), factor_table[ia, ia]* Dh_list[index_aa]], [np.eye(Dh_degree), np.zeros((Dh_degree,Dh_degree))]])
-                        anti_index = ia
-                        find_diagonal = True
-            if not find_diagonal:
-                anti_index = len(time_reversal)//2
-                ia = anti_index
-                index_aa = mul_table[ia, ia] - 1
-                U_a = np.block([[np.zeros((Dh_degree,Dh_degree)), factor_table[ia, ia]* Dh_list[index_aa]], [np.eye(Dh_degree), np.zeros((Dh_degree,Dh_degree))]])
-            index_a = anti_index
-            Eh_list = []
-            for irr, Dh in enumerate(Dh_list):
-                aha = find_index_class(index_a, irr, mul_table)
-                Eh = np.conj(factor_table[irr, index_a] / factor_table[index_a, aha]) * Dh_list[aha]
-                Eh_list.append(Eh)
-            # get the Eh and Dh, unitary part can be constructed 
-            # now find the anti_index as anti-unitary and U_a
-            new_rep_list = []
-            uni_rep_list = []
-            for ir, rep in enumerate(time_reversal):
-                if time_reversal[ir] > 0:
-                    Uh = np.block([[Dh_list[ir], np.zeros((Dh_degree,Dh_degree))], [np.zeros((Dh_degree,Dh_degree)), np.conj(Eh_list[ir])]])
-                    new_rep_list.append(Uh)
-                    uni_rep_list.append(Uh)
-            # finish the unitary part
-            # mul_a = mul_table[anti_index, :]
-            for i in range(len(time_reversal)// 2):
-                index_need = i + len(time_reversal)//2
-                h_need = find_multiplier(anti_index, index_need, mul_table)
-                # print(h_need)
-                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
-                new_rep_list.append(U_anti)
-            return new_rep_list
-        
-        # get Dh from the representations and solve the factor of Dh
-        def get_Dh(replist, torsion, time_reversal, degree):
-            assert torsion == 2 or torsion == 4
-            Dh_list = []
-            for it,tt in enumerate(time_reversal):
-                if tt > 0:
-                    Dh_list.append(replist[it][0:degree//2, 0:degree//2])
-            # print(Dh_list)
-            Dh_list = solve_factor_unitary(Dh_list, degree//2)
-            return Dh_list
-        
-        # def Dh_to_replist_torsion_4(Dh_list, Dh_degree, time_reversal, mul_table, factor_table):
-
-
-        replist = self.correp_matrix[repnum]
-        degree  = self.rep_degree[repnum]
-        torsion = self.torsion[repnum]
-        time_reversal = self.time_reversal
-        factor_table = self.factor
-        mul_table = self.mul_table
-        # torsion = 0
-        if not self.antiunitary:
-            new_rep_list = solve_factor_unitary(replist, degree)
-            return new_rep_list
-
-        # torsion = 1 and degree = 1
-        if degree == 1:
-            new_rep_list = []
-            alpha = replist[len(time_reversal)//2]
-            for itt, L_time in enumerate(time_reversal):
-                if L_time > 0:
-                    new_rep_list.append(replist[itt])
-                else:
-                    new_rep_list.append(replist[itt]/alpha)
-            return new_rep_list
-                    
-        # torsion = 1
-        if torsion == 1:
-            return solve_factor_torsion_1(replist, time_reversal, degree)
-
-        # if torsion = 2 or 4, always solve D(h) first
-        Dh_list = get_Dh(replist, torsion, time_reversal, degree)
-
-        # torsion =2 , can be solved
-        if torsion == 2:
-            return Dh_to_replist_torsion_2(Dh_list, degree//2, time_reversal, mul_table, factor_table)
-
-        # now the solve the torsion = 4 KK^* = -sigma D(aa)
-        assert torsion == 4
-        # degree = 2, KK^* can only be 1
-        if degree == 2:
-            new_rep_list = []
-            uni_rep_list = []
-            for irr, rep in enumerate(replist):
-                if time_reversal[irr] > 0:
-                    uni_rep_list.append(np.array([[rep[0,0],0],[0,rep[0,0]]]))
-                    new_rep_list.append(np.array([[rep[0,0],0],[0,rep[0,0]]]))
-            Dt0 = np.array([[0,-1],[1,0]])
-            idt0 = len(time_reversal)//2
-            for irrep, rep in enumerate(uni_rep_list):
-                new_rep_list.append(mul_table[idt0, irrep] * Dt0 @ np.conj(rep))
-            return new_rep_list
-        
-        # degree = 4, dim K = 2
-        if degree == 4:
-            new_rep_list = []
-            uni_rep_list = []
-            for i in range(len(time_reversal)// 2):
-                Uh = np.block([[Dh_list[i], np.zeros((2,2))], [np.zeros((2,2)), Dh_list[i]]])
-                new_rep_list.append(Uh)
-                uni_rep_list.append(Uh)
-            # finish the unitary part
-            # find the K^2 being identity or diagonal
-            find_K = False
-            for i in range(len(time_reversal)// 2):
-                ia = i + len(time_reversal)// 2
-                index_aa = mul_table[ia, ia] - 1
-                k_square = - factor_table[ia, ia] * Dh_list[index_aa]
-                # KK^* = I
-                if norm(k_square - np.eye(2)) < 1e-3:
-                    index_a = ia
-                    K = np.eye(2)
-                    find_K = True
-                    break
-                #KK^*= -I
-                elif norm(k_square + np.eye(2)) < 1e-3:
-                    index_a = ia
-                    K = np.array([[0,-1],[1,0]])
-                    find_K = True
-                    break
-            if not find_K:
-                for i in range(len(time_reversal)// 2):
-                    ia = i + len(time_reversal)// 2
-                    index_aa = mul_table[ia, ia] - 1
-                    k_square = - factor_table[ia, ia] * Dh_list[index_aa]
-                    if is_diagonal_matrix(k_square):
-                        ma = k_square[0, 0]
-                        mb = k_square[1,1]
-                        assert abs(ma - np.conj(mb))< 1e-3
-                        index_a = ia
-                        K = np.array([[0,ma],[1,0]])
-                        find_K = True
-                        break
-            if not find_K:
-                print('cant find K at torsion = 4')
-                return replist
-            anti_index = index_a
-            U_a = np.block([[np.zeros((2,2)), -K], [K, np.zeros((2,2))]])
-            for i in range(len(time_reversal)// 2):
-                index_need = i + len(time_reversal)//2
-                h_need = find_multiplier(anti_index, index_need, mul_table)
-                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
-                new_rep_list.append(U_anti)
-            return new_rep_list
-        
-        if degree == 6:
-            new_rep_list = []
-            uni_rep_list = []
-            for i in range(len(time_reversal)// 2):
-                Uh = np.block([[Dh_list[i], np.zeros((3,3))], [np.zeros((3,3)), Dh_list[i]]])
-                new_rep_list.append(Uh)
-                uni_rep_list.append(Uh)
-            # finish the unitary part
-            # find the K^2 being identity or diagonal
-            find_K = False
-            for i in range(len(time_reversal)// 2):
-                ia = i + len(time_reversal)// 2
-                index_aa = mul_table[ia, ia] - 1
-                k_square = - factor_table[ia, ia] * Dh_list[index_aa]
-                if norm(k_square - np.eye(3)) < 1e-3:
-                    index_a = ia
-                    K = np.eye(3)
-                    find_K = True
-                    break
-            if not find_K:
-                return replist
-                # ValueError('cant find K at torsion = 4')
-            anti_index = index_a
-            U_a = np.block([[np.zeros((3,3)), -K], [K, np.zeros((3,3))]])
-            for i in range(len(time_reversal)// 2):
-                index_need = i + len(time_reversal)//2
-                h_need = find_multiplier(anti_index, index_need, mul_table)
-                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
-                new_rep_list.append(U_anti)
-            return new_rep_list
-
-        
-        # high degree with torsion = 4
-        if degree > 7:
-            d_half = degree//2
-            new_rep_list = []
-            uni_rep_list = []
-            for i in range(len(time_reversal)// 2):
-                Uh = np.block([[Dh_list[i], np.zeros((degree//2,degree//2))], [np.zeros((degree//2,degree//2)), Dh_list[i]]])
-                new_rep_list.append(Uh)
-                uni_rep_list.append(Uh)
-            # finish the unitary part
-            # find the K^2 being identity or diagonal
-            find_K = False
-            for i in range(len(time_reversal)// 2):
-                ia = i + len(time_reversal)// 2
-                index_aa = mul_table[ia, ia] - 1
-                k_square = - factor_table[ia, ia] * Dh_list[index_aa]
-                if norm(k_square - np.eye(d_half)) < 1e-3:
-                    index_a = ia
-                    K = np.eye(d_half)
-                    find_K = True
-                    break
-            if not find_K:
-                return replist
-                ValueError('cant find K at torsion = 4')
-            anti_index = index_a
-            U_a = np.block([[np.zeros((3,3)), -K], [K, np.zeros((3,3))]])
-            for i in range(len(time_reversal)// 2):
-                index_need = i + len(time_reversal)//2
-                h_need = find_multiplier(anti_index, index_need, mul_table)
-                U_anti = factor_table[anti_index, h_need] * U_a @ np.conj(uni_rep_list[h_need])
-                new_rep_list.append(U_anti)
-            return new_rep_list
-
-
-
-
-            
-
-        
-
-    
     def cal_classes(self):
         def find_inversion(element, multable):
             row = multable[element]
@@ -1559,13 +801,11 @@ class LittleGroup:  # little group at a special k point
 
 
 
-def load_little_group(ssgNum, kvec, need_beautify , group_type, ssg_dic):
+def load_little_group(ssgNum, kvec, need_beautify, group_type, ssg_dic, seed=0):
     lg = LittleGroup(ssgNum, kvec, group_type, ssg_dic, need_beautify)
+    lg.seed = seed
     lg.k_op()
-    lg.get_regular_rep_list()
-    if need_beautify:
-        lg.cal_classes()
-        lg.regular_subgroup()
+    lg.get_regular_rep_list(build_dense=False)
     lg.get_irreducible_rep()
     # lg.get_kdotp()
     # lg.get_W(1)
@@ -1595,139 +835,131 @@ class CustomEncoder(json.JSONEncoder):
             return {"real": obj.real, "imag": obj.imag}
         return super().default(obj)
 
-def load_one_ssg_kvec(ssgnum, kvec, single, out ,fileType , optimize): # rep_degree character
-    if single == 1:
-        sd = 'single'
-    else:
-        sd = 'double'
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    pkl_file_path = os.path.join(script_dir, '../ssg_data/identify.pkl')
-    file = pkl_file_path
-    with open(file, 'rb') as f:
-        ssg_list = pickle.load(f)
-    ssgdic_list = []
-    find_ssg = 0
-    for ssg in ssg_list:
-        num = ssg['ssgNum']
-        if ssg['ssgNum'] == ssgnum:
-            a = ssg
-            find_ssg = 1
-            break
-    if not find_ssg:
-        raise ValueError('not a valid SSG number in the database, please check the input SSG number.')
-    Gid = int(ssgnum.split('.')[0])
-    # need_beautify = 0
-    # if out == out == 'rep_matrix':
-    #     need_beautify = 1
-    # kvec_dict = ssgkvec[Gid-1]
-    if 1:
-        print('k vector:', kvec)
-        ssglg = load_little_group(ssgnum, kvec, optimize, sd, a)
-        # output json file
+def load_one_ssg_kvec(ssgnum, kvec, single=2, out='character', fileType=None,
+                     optimize=False, convention='bloch', rep=None, ops=None,
+                     compact_characters=False, seed=0, html_path=None,
+                     text_path=None, export_path=None):
+    """Compute, validate, and report one SSG little group.
+
+    kvec uses the reciprocal basis of pure translations. JSON/NPY matrices
+    remain projective; the selected display convention applies to reports.
+    """
+    from pathlib import Path
+    import contextlib
+    from ssg_database import load_database
+    from ssg_output import from_little_group, report_text, report_html
+    kvec = np.asarray(kvec, dtype=float)
+    if kvec.shape != (3,) or not np.isfinite(kvec).all():
+        raise ValueError('k must contain three finite real coordinates.')
+    if single not in (1, 2):
+        raise ValueError('Group type must be 1 (single-valued) or 2 (double-valued).')
+    if out not in ('character', 'rep_matrix', 'rep_degree', 'both'):
+        raise ValueError('Unknown output type.')
+    if fileType not in (None, 'json', 'npy'):
+        raise ValueError('Export type must be json or npy.')
+    if convention not in ('bloch', 'projective'):
+        raise ValueError('Unknown display convention.')
+    if not isinstance(optimize, (bool, np.bool_)):
+        raise ValueError('Optimize must be a boolean.')
+    if rep is not None and rep < 1:
+        raise ValueError('Representation indices start at 1.')
+    if ops is not None and (not ops or min(ops) < 1):
+        raise ValueError('Operation indices start at 1.')
+    if export_path is not None and fileType is None:
+        raise ValueError('--export requires --fileType json or npy.')
+    database = load_database()
+    if ssgnum not in database:
+        raise ValueError('Unknown SSG number: '+ssgnum)
+    with contextlib.redirect_stdout(sys.stderr):
+        lg = load_little_group(ssgnum, kvec, optimize,
+                              'single' if single == 1 else 'double', database[ssgnum], seed=seed)
+    if rep is not None and rep > lg.rep_num:
+        raise ValueError('Representation index exceeds the number of corepresentations.')
+    if ops is not None and max(ops) > len(lg.time_reversal):
+        raise ValueError('Operation index exceeds this little group order.')
+    data = from_little_group(lg)
+    text = report_text(data, rep_label='r'+str(rep) if rep is not None else None,
+                       operation_ids=ops, convention=convention, output=out,
+                       compress=compact_characters)
+    def write_text(path, content):
+        path = Path(path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding='utf-8')
+    if html_path:
+        chosen_rep = rep if rep is not None else int(np.argmax(lg.rep_degree))+1
+        chosen_ops = ops
+        if chosen_ops is None:
+            chosen_ops = list(range(1, min(4, len(lg.time_reversal))+1))
+            anti = [i+1 for i, t in enumerate(lg.time_reversal) if t < 0]
+            if anti and anti[0] not in chosen_ops:
+                chosen_ops.append(anti[0])
+        write_text(html_path, report_html(data, 'r'+str(chosen_rep), chosen_ops,
+                                         convention, compress=compact_characters))
+    if text_path:
+        write_text(text_path, text)
+    if fileType:
+        destination = Path(export_path or 'output.'+fileType)
+        destination.parent.mkdir(parents=True, exist_ok=True)
         if fileType == 'json':
-            with open("output.json", "w", encoding="utf-8") as file:
-                json.dump(ssglg.to_dic_json(), file, cls=CustomEncoder, ensure_ascii=False, indent=4)
-        if fileType == 'npy':
-            np.save("output.npy", ssglg.to_dic_npy())
-            # to read npy: 
-            # loaded_data = np.load("output.npy", allow_pickle=True).item()
-            
-        for irotlg, rotlg in enumerate(ssglg.rotC):
-            print(irotlg+1, ' th operation:  space rotation  spin rotation translation')
-            print_mat(rotlg)
-            print_mat(ssglg.spin[irotlg])
-            print(ssglg.tauC[irotlg])
-            
-        # print('Space rotations:')
-        # print_matlist(ssglg.rotC)
-        # print('Spin rotations:')
-        # print_matlist(ssglg.spin)
-        # print('Translations:')
-        # print
-        rep_degree = ssglg.rep_degree
-        rep_num = len(rep_degree)
-        # print('the su2 factor part')
-        # print_mat(ssglg.ssg.factor_su2)
-        # print('the trans factor part')
-        # print_mat(ssglg.ssg.factor_trans)
-        # print('sum being:')
-        # print_mat(ssglg.factor)
-        if out == 'rep_degree':
-            print('repdgree is:')
-            print(rep_degree)
-        # print_matlist(ssglg.spin)
-        if out == 'character':
-            print('representation characters:')
-            for I in range(rep_num):
-                print(f'{I+1}th:')
-                print('torsion:', ssglg.torsion[I])
-                ch = ssglg.linear_character[I]
-                for ic, chh in enumerate(ch):
-                    real_part = f'{chh.real:+.5f}'
-                    imag_part = f'{chh.imag:+.5f}' #if chh.imag != 0 else '0.00000'
-                    if ic + 1 < 10:
-                        print(f'{ic+1}  {real_part}{imag_part}*i')
-                    else:
-                        print(f'{ic+1} {real_part}{imag_part}*i')
-        if out == 'rep_matrix':
-            print('representations:')
-            for i in range(rep_num):
-                print(i+1,'th:')
-                print_matlist(ssglg.correp_matrix[i])
-    return ssglg
+            destination.write_text(json.dumps(lg.to_dic_json(), cls=CustomEncoder, indent=2), encoding='utf-8')
+        else:
+            with destination.open('wb') as stream:
+                np.save(stream, lg.to_dic_npy())
+    print(text, end='')
+    return lg
 
 
-import argparse
-import numpy as np
+def parse_bool(value):
+    if isinstance(value, bool):
+        return value
+    if value.lower() in ('true', '1', 'yes'):
+        return True
+    if value.lower() in ('false', '0', 'no'):
+        return False
+    raise argparse.ArgumentTypeError('Expected true or false.')
+
 
 def main():
-    parser = argparse.ArgumentParser(description='SSG Representation Program')
-    parser.add_argument('--ssgNum', type=str, required=True, help='SSG number')
-    parser.add_argument('--kp', nargs=3, type=float, required=True, help='k-point coordinates as three floats', metavar=('kx', 'ky', 'kz'))
-    parser.add_argument('--groupType', type=int, default=2, help='Group type: 1 for single group, 2 for double group (default: 2)')
-    parser.add_argument('--out', type=str, default='character', help='Output type: character, rep_matrix, rep_degree (default: character)')
-    parser.add_argument('--fileType', type=str, default=None, help="Output file type: 'json', 'npy', or None (default: None)")
-    parser.add_argument('--optimize', type=bool, default=False, help="Optimize SSG representation matrices (default: False)")
-
+    parser = argparse.ArgumentParser(description='Compute and validate SSG little-group corepresentations.')
+    parser.add_argument('--ssgNum', required=True, help='SSG database identifier')
+    inputs = parser.add_mutually_exclusive_group(required=True)
+    inputs.add_argument('--kp', nargs=3, type=float, metavar=('kx', 'ky', 'kz'),
+                        help='Numerical coordinates in the reciprocal basis of pure translations')
+    inputs.add_argument('--kpath', '--kp-symbolic', nargs=3, metavar=('kx(t)', 'ky(t)', 'kz(t)'),
+                        help='Symbolic path coordinates, for example: "1/2" "1/2" "t"')
+    parser.add_argument('--parameter', help='Real path parameter name; default: t (requires --kpath)')
+    parser.add_argument('--interval', nargs=2, metavar=('LOWER', 'UPPER'),
+                        help='Open path interval with exact bounds; default: 0 1 (requires --kpath)')
+    parser.add_argument('--groupType', type=int, choices=[1, 2], default=2)
+    parser.add_argument('--out', choices=['character', 'rep_matrix', 'rep_degree', 'both'], default='character')
+    parser.add_argument('--fileType', choices=['json', 'npy'])
+    parser.add_argument('--export', help='Export path; requires --fileType')
+    parser.add_argument('--optimize', type=parse_bool, nargs='?', const=True, default=False,
+                        help='Use a safe unitary basis optimization (true/false)')
+    parser.add_argument('--seed', type=int, default=0, help='Local random seed for reproducible reduction')
+    parser.add_argument('--convention', choices=['bloch', 'projective'], default='bloch')
+    parser.add_argument('--rep', type=int, help='One-based representation index for matrices')
+    parser.add_argument('--ops', type=int, nargs='+', help='One-based operation indices within this little group')
+    parser.add_argument('--compact-characters', action='store_true',
+                        help='Merge exactly equal character vectors, not conjugacy classes')
+    parser.add_argument('--html', help='Write an offline HTML report (default: largest representation)')
+    parser.add_argument('--text', help='Also save the aligned stdout report to this file')
+    args = parser.parse_args()
     try:
-        args = parser.parse_args()
-        
-        # Validate inputs
-        ssgNum = args.ssgNum
-        kx, ky, kz = args.kp
-        groupType = args.groupType
-        out = args.out
-        fileType = args.fileType
-        optimize = args.optimize
-
-        if groupType not in [1, 2]:
-            raise ValueError('Group type must be 1 (single group) or 2 (double group).')
-
-        if out not in ['character', 'rep_degree', 'rep_matrix']:
-            raise ValueError("Output type must be one of 'character', 'rep_matrix', or 'rep_degree'.")
-
-        if fileType not in [None, 'json', 'npy']:
-            raise ValueError("File type must be one of 'json', 'npy', or None.")
-
-        if not isinstance(optimize, bool):
-            raise ValueError("Optimize must be a boolean value (True or False).")
-
-        # Call the main function with parsed arguments
-        load_one_ssg_kvec(
-            ssgNum,
-            np.array([kx, ky, kz]),
-            single=groupType,
-            out=out,
-            fileType=fileType,  # Pass fileType to load_one_ssg_kvec
-            optimize=optimize   # Pass optimize to load_one_ssg_kvec
-        )
-    
-    except ValueError as e:
-        print(f"Input error: {e}")
-        print("Use python SSGReps.py --help to see usage details.")
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-        print("Check your input and try again. Use python SSGReps.py --help for more information.")
+        if args.kpath is not None:
+            from ssg_symbolic import load_one_ssg_path
+            load_one_ssg_path(args.ssgNum, args.kpath, args.parameter or 't', args.interval or ('0', '1'),
+                              args.groupType, args.out, args.fileType, args.optimize, args.convention,
+                              args.rep, args.ops, args.compact_characters, args.seed,
+                              args.html, args.text, args.export)
+        else:
+            if args.parameter is not None or args.interval is not None:
+                raise ValueError('--parameter and --interval require --kpath.')
+            load_one_ssg_kvec(args.ssgNum, args.kp, args.groupType, args.out, args.fileType,
+                             args.optimize, args.convention, args.rep, args.ops,
+                             args.compact_characters, args.seed, args.html, args.text, args.export)
+    except (ValueError, RuntimeError, FileNotFoundError) as exc:
+        parser.exit(2, 'Error: '+str(exc)+'\n')
 
 
 if __name__ == '__main__':

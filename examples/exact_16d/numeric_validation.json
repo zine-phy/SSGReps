@@ -1,0 +1,19 @@
+{
+  "ssg": "221.8.6.3",
+  "k": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "dimensions": [
+    8,
+    8,
+    16
+  ],
+  "double_valued": true,
+  "numerical_product_frobenius": 4.471231662788574e-16,
+  "numerical_unitarity_frobenius": 3.534685957192913e-16,
+  "character_match_max": 7.105428426990384e-15,
+  "construction": "exact central extension, induced module and projector, Wigner pairing",
+  "note": "Numerical validation is secondary; GAP verifies every relation exactly."
+}

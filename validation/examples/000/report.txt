@@ -1,0 +1,33 @@
+SSG 1.2.1.3 | k = (0, 0, 0)
+===========================
+Coordinates: reciprocal basis of pure translations.
+Convention: D(g) = exp(-i k_cart.tau_g) M(g); antiunitary operator = D(g) K.
+Operations: 2 | unitary: 1 | dimensions: 2
+Numeric display: 6 significant digits; components below 1e-10 shown as 0.
+
+Characters: unitary operations only. Identical-value columns merged; these are NOT conjugacy classes.
+
+  rep | dim | g001
+------+-----+-----
+count |   - |    1
+   r1 |   2 |    2
+
+Column membership:
+g001: g001
+
+
+r1 | dimension 2 | g001 | unitary
+R = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]; tau = [0, 0, 0]
+spin = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+D(g001) = 1 * matrix
+    1 2
+1 | 1 0 |
+2 | 0 1 |
+
+r1 | dimension 2 | g002 | antiunitary
+R = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]; tau = [0, 0, 1]
+spin = [[-1, 0, 0], [0, -1, 0], [0, 0, -1]]
+D(g002) = 1 * matrix ; operator includes K
+    1  2
+1 | 0 -1 |
+2 | 1  0 |

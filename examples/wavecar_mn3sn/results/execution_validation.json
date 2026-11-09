@@ -1,0 +1,74 @@
+{
+  "executable_sha256": "773c2a656a76f7e2158618c2b77a12a849f5ed894f4b6f34eaaa3c3c881f8ab9",
+  "source_scf": "Mn3Sn/scf/L_ANTIUNI_compare_20261023_221458/ideal-anti1",
+  "stages": {
+    "source_scf": {
+      "version": "vasp.6.4.2 20Jul23 (build Mar 13 2025 21:30:53) complex",
+      "last_electronic_iteration": 26,
+      "last_dE_eV": -9.2218e-07,
+      "last_d_eps_eV": -8.0822e-07,
+      "threshold_eV": 1e-06,
+      "ediff_reached": true,
+      "completed": true,
+      "input_hashes": {
+        "POSCAR": "9571812bc0d2a5398023716a6674be085f2cf761d2d01605a8faed4e431f0184",
+        "INCAR": "338ea4a9a934a5c1c0bdf8a526d9e0698e2985e1502eb9ecc56b3e616b4cc4a4",
+        "KPOINTS": "557816621e4daab810f2ee2c419bd35eebf512d5eeae19be6d162d421bda662d",
+        "POTCAR": "513405fb6b57720a7e01f6201bb6544ba03610c798d69b7e3d53336c1505caba"
+      }
+    },
+    "probe": {
+      "version": "vasp.6.4.2 20Jul23 (build Mar 13 2025 21:30:53) complex",
+      "last_electronic_iteration": 11,
+      "last_dE_eV": 6.23e-11,
+      "last_d_eps_eV": -1.5267e-11,
+      "threshold_eV": 1e-10,
+      "ediff_reached": true,
+      "completed": true,
+      "input_hashes": {
+        "POSCAR": "b6879c242850294d3ad38b39a7f19e973b9c28b8416500fe13ed4d3b4b247c2b",
+        "INCAR": "689fe8d726ecb22d0aefb32ecd5c7e317e66002425a1a30df4c03ac9870bf770",
+        "KPOINTS": "e349d48cca841435858ef28bb0fae2b7d214679275cbdafe8d9303f143e8ea36",
+        "POTCAR": "513405fb6b57720a7e01f6201bb6544ba03610c798d69b7e3d53336c1505caba"
+      }
+    },
+    "bands": {
+      "version": "vasp.6.4.2 20Jul23 (build Mar 13 2025 21:30:53) complex",
+      "last_electronic_iteration": 18,
+      "last_dE_eV": 4.2746e-11,
+      "last_d_eps_eV": -1.0256e-13,
+      "threshold_eV": 1e-10,
+      "ediff_reached": true,
+      "completed": true,
+      "input_hashes": {
+        "POSCAR": "b6879c242850294d3ad38b39a7f19e973b9c28b8416500fe13ed4d3b4b247c2b",
+        "INCAR": "689fe8d726ecb22d0aefb32ecd5c7e317e66002425a1a30df4c03ac9870bf770",
+        "KPOINTS": "3afa99a6c758b3efae4eef2988f1e5803091490c3b6dc29d7ce51c48575d0991",
+        "POTCAR": "513405fb6b57720a7e01f6201bb6544ba03610c798d69b7e3d53336c1505caba"
+      }
+    }
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.16.0",
+    "sympy": "1.14.0",
+    "spglib": "2.6.0",
+    "matplotlib": "3.10.0",
+    "MOM2SSG": "1.0.0"
+  },
+  "python": "3.12.0 | packaged by conda-forge | (main, Oct  3 2023, 08:43:22) [GCC 12.3.0]",
+  "final_jobs": {
+    "bands": "607513",
+    "analysis": "607514"
+  },
+  "superseded_scf_trial": {
+    "job": "607499",
+    "converged": false,
+    "used_for_results": false
+  },
+  "wavecar_reader": {
+    "path": "VaspBandUnfolding/vaspwfc.py",
+    "sha256": "adeb671b25a5540e089e300a986e653dbd95f6ef305073c1ba20d2552cbeab92"
+  },
+  "ssgreps_release_archive_sha256": "d07d1a8c4086b39de5125180d237f72af621c9fcc082e253d49fdaf0ab8dcfca"
+}

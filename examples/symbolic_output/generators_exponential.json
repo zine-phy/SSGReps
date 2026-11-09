@@ -1,0 +1,1908 @@
+[
+  {
+    "path": "GX",
+    "label": "r1",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(-I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(-I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{- i \\pi t} & 0\\\\0 & e^{- i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r1",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- i \\pi t}\\\\e^{i \\pi \\left(1 - t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(-2*t - 1)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - t))",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - t))"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{i \\pi \\left(1 - t\\right)} & 0\\\\0 & e^{i \\pi \\left(1 - t\\right)}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r2",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- i \\pi t}\\\\e^{i \\pi \\left(1 - t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(-I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(-I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{- i \\pi t} & 0\\\\0 & e^{- i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r3",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- i \\pi t}\\\\e^{i \\pi \\left(1 - t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(-2*t - 1)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - t))",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - t))"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{i \\pi \\left(1 - t\\right)} & 0\\\\0 & e^{i \\pi \\left(1 - t\\right)}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r4",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- i \\pi t}\\\\e^{i \\pi \\left(1 - t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(I*pi*(1 - t))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi*(1 - 2*t)/2)"
+      ],
+      [
+        "exp(-I*pi*t)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{i \\pi \\left(1 - t\\right)} & 0\\\\0 & 0 & 0 & e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\\\e^{- i \\pi t} & 0 & 0 & 0\\\\0 & e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(-2*t - 1)/2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - t))",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0\\\\0 & 0 & 0 & e^{- i \\pi t}\\\\e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0 & 0 & 0\\\\0 & e^{i \\pi \\left(1 - t\\right)} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "global_index_1based": 5,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(-I*pi*t)",
+        "0",
+        "0"
+      ],
+      [
+        "exp(-I*pi*t)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-I*pi*t)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(-I*pi*t)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- i \\pi t} & 0 & 0\\\\e^{- i \\pi t} & 0 & 0 & 0\\\\0 & 0 & 0 & e^{- i \\pi t}\\\\0 & 0 & e^{- i \\pi t} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(-I*pi*t)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - t))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "exp(-I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi*(1 - t))"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{- i \\pi t} & 0 & 0 & 0\\\\0 & e^{i \\pi \\left(1 - t\\right)} & 0 & 0\\\\0 & 0 & e^{- i \\pi t} & 0\\\\0 & 0 & 0 & e^{i \\pi \\left(1 - t\\right)}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GX",
+    "label": "r5",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(-I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi*(1 - t))"
+      ],
+      [
+        "exp(I*pi*(1 - t))",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(-I*pi*t)",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{- i \\pi t} & 0\\\\0 & 0 & 0 & e^{i \\pi \\left(1 - t\\right)}\\\\e^{i \\pi \\left(1 - t\\right)} & 0 & 0 & 0\\\\0 & e^{- i \\pi t} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-2*I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - 2 t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- 2 i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi*(-4*t - 1)/2)"
+      ],
+      [
+        "exp(I*pi*(-4*t - 1)/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}}\\\\e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(-2*I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(-2*I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{- 2 i \\pi t} & 0\\\\0 & e^{- 2 i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r1",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-2*I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- 2 i \\pi t}\\\\e^{i \\pi \\left(1 - 2 t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-2*I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - 2 t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- 2 i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi*(-4*t - 1)/2)"
+      ],
+      [
+        "exp(I*pi*(-4*t - 1)/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}}\\\\e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t))"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{i \\pi \\left(1 - 2 t\\right)} & 0\\\\0 & e^{i \\pi \\left(1 - 2 t\\right)}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r2",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-2*I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- 2 i \\pi t}\\\\e^{i \\pi \\left(1 - 2 t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-2*I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - 2 t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- 2 i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi*(1 - 4*t)/2)"
+      ],
+      [
+        "exp(I*pi*(1 - 4*t)/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\\\e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(-2*I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(-2*I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{- 2 i \\pi t} & 0\\\\0 & e^{- 2 i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r3",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-2*I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- 2 i \\pi t}\\\\e^{i \\pi \\left(1 - 2 t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "global_index_1based": 2,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/2)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t))"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-2*I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - 2 t\\right)}\\\\\\frac{\\sqrt{2}}{2} e^{- 2 i \\pi t} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi*(1 - 4*t)/2)"
+      ],
+      [
+        "exp(I*pi*(1 - 4*t)/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\\\e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t))"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{i \\pi \\left(1 - 2 t\\right)} & 0\\\\0 & e^{i \\pi \\left(1 - 2 t\\right)}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GM",
+    "label": "r4",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(-2*I*pi*t)"
+      ],
+      [
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{- 2 i \\pi t}\\\\e^{i \\pi \\left(1 - 2 t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 2*t))"
+      ],
+      [
+        "(sqrt(6)/3)*exp(-2*I*pi*t)",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & \\frac{\\sqrt{6}}{3} e^{i \\pi \\left(1 - 2 t\\right)}\\\\\\frac{\\sqrt{6}}{3} e^{- 2 i \\pi t} & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 6*t)/3)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(2*I*pi*(1 - 3*t)/3)",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 6 t\\right)}{3}}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{2 i \\pi \\left(1 - 3 t\\right)}{3}} & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "global_index_1based": 11,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 6*t)/3)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-6*t - 1)/3)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 6 t\\right)}{3}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 6 t - 1\\right)}{3}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "global_index_1based": 122,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(6)/3)*exp(I*pi*(1 - 8*t)/2)",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t))"
+      ],
+      [
+        "(sqrt(3)/3)*exp(-4*I*pi*t)",
+        "(sqrt(6)/3)*exp(I*pi*(-8*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 8 t\\right)}{2}} & \\frac{\\sqrt{3}}{3} e^{i \\pi \\left(1 - 4 t\\right)}\\\\\\frac{\\sqrt{3}}{3} e^{- 4 i \\pi t} & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(- 8 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r1",
+    "global_index_1based": 218,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(-6*I*pi*t)",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/2)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/2)",
+        "(sqrt(3)/3)*exp(-6*I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{- 6 i \\pi t} & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{2}}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{2}} & \\frac{\\sqrt{3}}{3} e^{- 6 i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 2*t))"
+      ],
+      [
+        "(sqrt(6)/3)*exp(-2*I*pi*t)",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & \\frac{\\sqrt{6}}{3} e^{i \\pi \\left(1 - 2 t\\right)}\\\\\\frac{\\sqrt{6}}{3} e^{- 2 i \\pi t} & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 6*t)/3)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(2*I*pi*(1 - 3*t)/3)",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 6 t\\right)}{3}}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{2 i \\pi \\left(1 - 3 t\\right)}{3}} & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "global_index_1based": 11,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "exp(I*pi*(1 - 6*t)/3)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-6*t - 1)/3)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{\\frac{i \\pi \\left(1 - 6 t\\right)}{3}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 6 t - 1\\right)}{3}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "global_index_1based": 122,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(6)/3)*exp(I*pi*(-8*t - 1)/2)",
+        "(sqrt(3)/3)*exp(-4*I*pi*t)"
+      ],
+      [
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t))",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 8*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(- 8 t - 1\\right)}{2}} & \\frac{\\sqrt{3}}{3} e^{- 4 i \\pi t}\\\\\\frac{\\sqrt{3}}{3} e^{i \\pi \\left(1 - 4 t\\right)} & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 8 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r2",
+    "global_index_1based": 218,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(-6*I*pi*t)",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/2)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/2)",
+        "(sqrt(3)/3)*exp(-6*I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{- 6 i \\pi t} & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{2}}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{2}} & \\frac{\\sqrt{3}}{3} e^{- 6 i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(-2*I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 4*t)/2)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(I*pi*(1 - 2*t))",
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 4*t)/2)",
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{- 2 i \\pi t} & 0\\\\0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\\\\\frac{\\sqrt{6}}{3} e^{i \\pi \\left(1 - 2 t\\right)} & 0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & 0\\\\0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & 0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(-6*t - 1)/3)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(5 - 12*t)/6)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(2*I*pi*(-3*t - 1)/3)",
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/6)",
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(- 6 t - 1\\right)}{3}} & 0\\\\0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(5 - 12 t\\right)}{6}}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{2 i \\pi \\left(- 3 t - 1\\right)}{3}} & 0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & 0\\\\0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{6}} & 0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "global_index_1based": 11,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(I*pi*(-4*t - 1)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 6*t)/3)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/6)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(2*I*pi*(-3*t - 1)/3)",
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(-12*t - 5)/6)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/6)",
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(5 - 12*t)/6)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 6 t\\right)}{3}} & 0\\\\0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{6}}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{2 i \\pi \\left(- 3 t - 1\\right)}{3}} & 0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(- 12 t - 5\\right)}{6}} & 0\\\\0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{6}} & 0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(5 - 12 t\\right)}{6}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "global_index_1based": 122,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 8*t)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(-8*t - 1)/2)"
+      ],
+      [
+        "(sqrt(3)/3)*exp(I*pi*(1 - 8*t)/2)",
+        "0",
+        "(sqrt(6)/3)*exp(-4*I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 4*t))",
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 4*t))"
+      ],
+      [
+        "(sqrt(6)/3)*exp(I*pi*(-8*t - 1)/2)",
+        "0",
+        "(sqrt(3)/3)*exp(-4*I*pi*t)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & \\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 8 t\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(- 8 t - 1\\right)}{2}}\\\\\\frac{\\sqrt{3}}{3} e^{\\frac{i \\pi \\left(1 - 8 t\\right)}{2}} & 0 & \\frac{\\sqrt{6}}{3} e^{- 4 i \\pi t} & 0\\\\0 & \\frac{\\sqrt{6}}{3} e^{i \\pi \\left(1 - 4 t\\right)} & 0 & \\frac{\\sqrt{3}}{3} e^{i \\pi \\left(1 - 4 t\\right)}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(- 8 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{3}}{3} e^{- 4 i \\pi t} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "GR",
+    "label": "r3",
+    "global_index_1based": 218,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "(sqrt(3)/3)*exp(-6*I*pi*t)",
+        "0",
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(3)/3)*exp(I*pi*(1 - 6*t))",
+        "0",
+        "(sqrt(6)/3)*exp(-6*I*pi*t)"
+      ],
+      [
+        "(sqrt(6)/3)*exp(I*pi*(1 - 12*t)/2)",
+        "0",
+        "(sqrt(3)/3)*exp(-6*I*pi*t)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(6)/3)*exp(-6*I*pi*t)",
+        "0",
+        "(sqrt(3)/3)*exp(-6*I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{3}}{3} e^{- 6 i \\pi t} & 0 & \\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{2}} & 0\\\\0 & \\frac{\\sqrt{3}}{3} e^{i \\pi \\left(1 - 6 t\\right)} & 0 & \\frac{\\sqrt{6}}{3} e^{- 6 i \\pi t}\\\\\\frac{\\sqrt{6}}{3} e^{\\frac{i \\pi \\left(1 - 12 t\\right)}{2}} & 0 & \\frac{\\sqrt{3}}{3} e^{- 6 i \\pi t} & 0\\\\0 & \\frac{\\sqrt{6}}{3} e^{- 6 i \\pi t} & 0 & \\frac{\\sqrt{3}}{3} e^{- 6 i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi*(1 - 2*t)/2)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)",
+        "0",
+        "0"
+      ],
+      [
+        "exp(I*pi*(-2*t - 1)/2)",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & 0 & e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\\\0 & 0 & e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0 & 0\\\\e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0 & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(I*pi/2)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-I*pi/2)"
+      ],
+      [
+        "exp(-I*pi/2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi/2)",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{\\frac{i \\pi}{2}} & 0\\\\0 & 0 & 0 & e^{- \\frac{i \\pi}{2}}\\\\e^{- \\frac{i \\pi}{2}} & 0 & 0 & 0\\\\0 & e^{\\frac{i \\pi}{2}} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "global_index_1based": 49,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(I*pi)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi)"
+      ],
+      [
+        "exp(I*pi)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi)",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{i \\pi} & 0\\\\0 & 0 & 0 & e^{i \\pi}\\\\e^{i \\pi} & 0 & 0 & 0\\\\0 & e^{i \\pi} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "global_index_1based": 121,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi*(1 - t))",
+        "0",
+        "0"
+      ],
+      [
+        "exp(-I*pi*t)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-I*pi*t)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi*(1 - t))",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{i \\pi \\left(1 - t\\right)} & 0 & 0\\\\e^{- i \\pi t} & 0 & 0 & 0\\\\0 & 0 & 0 & e^{- i \\pi t}\\\\0 & 0 & e^{i \\pi \\left(1 - t\\right)} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XM",
+    "label": "r1",
+    "global_index_1based": 217,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi*(-2*t - 1)/2)"
+      ],
+      [
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t)/2)",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0\\\\0 & 0 & 0 & e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\\\e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0 & 0 & 0\\\\0 & e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "exp(I*pi)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 1 & 0 & 0\\\\e^{i \\pi} & 0 & 0 & 0\\\\0 & 0 & 0 & 1\\\\0 & 0 & e^{i \\pi} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))",
+        "0",
+        "0"
+      ],
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)} & 0 & 0\\\\\\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)} & 0 & 0\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)} & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)}\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "global_index_1based": 25,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi/2)",
+        "0",
+        "0"
+      ],
+      [
+        "exp(-I*pi/2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-I*pi/2)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{\\frac{i \\pi}{2}} & 0 & 0\\\\e^{- \\frac{i \\pi}{2}} & 0 & 0 & 0\\\\0 & 0 & 0 & e^{- \\frac{i \\pi}{2}}\\\\0 & 0 & e^{\\frac{i \\pi}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "global_index_1based": 50,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 3)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 3)/4)",
+        "0",
+        "0"
+      ],
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 3)/4)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(3 - 4*t)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(3 - 4*t)/4)"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(3 - 4*t)/4)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 3\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 3\\right)}{4}} & 0 & 0\\\\\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 3\\right)}{4}} & 0 & 0\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(3 - 4 t\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(3 - 4 t\\right)}{4}}\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(3 - 4 t\\right)}{4}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "global_index_1based": 98,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi)",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & 0 & e^{i \\pi}\\\\0 & 0 & e^{i \\pi} & 0\\\\0 & 1 & 0 & 0\\\\1 & 0 & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r1",
+    "global_index_1based": 194,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "exp(-2*I*pi*t)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-2*I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{- 2 i \\pi t} & 0 & 0 & 0\\\\0 & e^{i \\pi \\left(1 - 2 t\\right)} & 0 & 0\\\\0 & 0 & e^{i \\pi \\left(1 - 2 t\\right)} & 0\\\\0 & 0 & 0 & e^{- 2 i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "exp(I*pi)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 1 & 0 & 0\\\\e^{i \\pi} & 0 & 0 & 0\\\\0 & 0 & 0 & 1\\\\0 & 0 & e^{i \\pi} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))",
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "0",
+        "0"
+      ],
+      [
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - t))",
+        "(sqrt(2)/2)*exp(-I*pi*t)"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(-I*pi*t)",
+        "(sqrt(2)/2)*exp(-I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)} & \\frac{\\sqrt{2}}{2} e^{- i \\pi t} & 0 & 0\\\\\\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{- i \\pi t} & 0 & 0\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{i \\pi \\left(1 - t\\right)} & \\frac{\\sqrt{2}}{2} e^{- i \\pi t}\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{- i \\pi t} & \\frac{\\sqrt{2}}{2} e^{- i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "global_index_1based": 25,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi/2)",
+        "0",
+        "0"
+      ],
+      [
+        "exp(-I*pi/2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-I*pi/2)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{\\frac{i \\pi}{2}} & 0 & 0\\\\e^{- \\frac{i \\pi}{2}} & 0 & 0 & 0\\\\0 & 0 & 0 & e^{- \\frac{i \\pi}{2}}\\\\0 & 0 & e^{\\frac{i \\pi}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "global_index_1based": 50,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/4)",
+        "0",
+        "0"
+      ],
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 3)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 4*t)/4)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/4)"
+      ],
+      [
+        "0",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(3 - 4*t)/4)",
+        "(sqrt(2)/2)*exp(I*pi*(-4*t - 1)/4)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{4}} & 0 & 0\\\\\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 3\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 4 t\\right)}{4}} & 0 & 0\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{4}}\\\\0 & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(3 - 4 t\\right)}{4}} & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 4 t - 1\\right)}{4}}\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "global_index_1based": 98,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi)",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & 0 & e^{i \\pi}\\\\0 & 0 & e^{i \\pi} & 0\\\\0 & 1 & 0 & 0\\\\1 & 0 & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "MR",
+    "label": "r2",
+    "global_index_1based": 194,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "exp(-2*I*pi*t)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "exp(I*pi*(1 - 2*t))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-2*I*pi*t)"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}e^{- 2 i \\pi t} & 0 & 0 & 0\\\\0 & e^{i \\pi \\left(1 - 2 t\\right)} & 0 & 0\\\\0 & 0 & e^{i \\pi \\left(1 - 2 t\\right)} & 0\\\\0 & 0 & 0 & e^{- 2 i \\pi t}\\end{matrix}\\right]"
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "global_index_1based": 3,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)"
+      ],
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)"
+      ],
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}}\\\\\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0\\\\0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\\\\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "global_index_1based": 4,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)"
+      ],
+      [
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ],
+      [
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(-2*t - 1)/2)"
+      ],
+      [
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "0",
+        "(sqrt(2)/2)*exp(I*pi*(1 - 2*t)/2)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\\\\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\\\0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(- 2 t - 1\\right)}{2}}\\\\\\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0 & \\frac{\\sqrt{2}}{2} e^{\\frac{i \\pi \\left(1 - 2 t\\right)}{2}} & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "global_index_1based": 29,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(I*pi/2)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-I*pi/2)"
+      ],
+      [
+        "exp(I*pi/2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(-I*pi/2)",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{\\frac{i \\pi}{2}} & 0\\\\0 & 0 & 0 & e^{- \\frac{i \\pi}{2}}\\\\e^{\\frac{i \\pi}{2}} & 0 & 0 & 0\\\\0 & e^{- \\frac{i \\pi}{2}} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "global_index_1based": 149,
+    "antiunitary": false,
+    "matrices": [
+      [
+        "0",
+        "0",
+        "exp(I*pi/2)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(I*pi/2)"
+      ],
+      [
+        "exp(I*pi/2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "exp(I*pi/2)",
+        "0",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & 0 & e^{\\frac{i \\pi}{2}} & 0\\\\0 & 0 & 0 & e^{\\frac{i \\pi}{2}}\\\\e^{\\frac{i \\pi}{2}} & 0 & 0 & 0\\\\0 & e^{\\frac{i \\pi}{2}} & 0 & 0\\end{matrix}\\right]"
+  },
+  {
+    "path": "XR",
+    "label": "r1",
+    "global_index_1based": 245,
+    "antiunitary": true,
+    "matrices": [
+      [
+        "0",
+        "exp(I*pi*(1 - 2*t))",
+        "0",
+        "0"
+      ],
+      [
+        "exp(I*pi*(1 - 2*t))",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "exp(-2*I*pi*t)"
+      ],
+      [
+        "0",
+        "0",
+        "exp(-2*I*pi*t)",
+        "0"
+      ]
+    ],
+    "latex": "\\left[\\begin{matrix}0 & e^{i \\pi \\left(1 - 2 t\\right)} & 0 & 0\\\\e^{i \\pi \\left(1 - 2 t\\right)} & 0 & 0 & 0\\\\0 & 0 & 0 & e^{- 2 i \\pi t}\\\\0 & 0 & e^{- 2 i \\pi t} & 0\\end{matrix}\\right]"
+  }
+]

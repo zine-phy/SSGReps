@@ -1,0 +1,5 @@
+{
+  "generators": 82,
+  "exact_entry_equalities": 712,
+  "method": "symbolic equality; no floating recognition used for exact results"
+}

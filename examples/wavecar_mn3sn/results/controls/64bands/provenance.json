@@ -1,0 +1,83 @@
+{
+  "source_scf": "Mn3Sn/scf/L_ANTIUNI_compare_20261023_221458/ideal-anti1",
+  "source_fermi_eV": 6.192,
+  "source_ediff": 1e-06,
+  "source_lmaxmix": 2,
+  "source_lasph": false,
+  "soc": false,
+  "path": [
+    "G",
+    "M",
+    "K",
+    "G",
+    "A",
+    "L",
+    "H",
+    "A"
+  ],
+  "path_tick_indices_zero_based": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105
+  ],
+  "path_point_count": 106,
+  "points": {
+    "G": [
+      0,
+      0,
+      0
+    ],
+    "M": [
+      0.5,
+      0,
+      0
+    ],
+    "K": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0
+    ],
+    "A": [
+      0,
+      0,
+      0.5
+    ],
+    "L": [
+      0.5,
+      0,
+      0.5
+    ],
+    "H": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.5
+    ],
+    "Q": [
+      0.137,
+      0.219,
+      0.317
+    ]
+  },
+  "hashes": {
+    "POSCAR": "9571812bc0d2a5398023716a6674be085f2cf761d2d01605a8faed4e431f0184",
+    "POTCAR": "513405fb6b57720a7e01f6201bb6544ba03610c798d69b7e3d53336c1505caba",
+    "CHGCAR": "63a812810003c9f33fe6df086bd5d8f313da9d6a49e0a8cf8f2fd6403d42d9cd",
+    "INCAR": "338ea4a9a934a5c1c0bdf8a526d9e0698e2985e1502eb9ecc56b3e616b4cc4a4",
+    "OUTCAR": "2f59aab085f01e4807e37e294d9aaaeb98cb1572c6612b3bdbcc26fff2e84c4f"
+  },
+  "source_smearing": -5,
+  "source_kmesh": [
+    7,
+    7,
+    7
+  ],
+  "source_ssg_operations": 48,
+  "source_magnetic_density_relative_residual": 2.1207121865383095e-11,
+  "moment_idealization_max_muB": 2.3788646684e-05,
+  "notes": "Existing converged full-SSG NSOC PBE density, independently audited; fixed-density direct k-point calculations. Tightened SCF trial excluded."
+}

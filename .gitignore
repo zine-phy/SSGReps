@@ -1,1 +1,11 @@
 ssg_data/identify.pkl
+.venv/
+__pycache__/
+*.pyc
+output.json
+output.npy
+.DS_Store
+# Local VASP binaries/data and licensed PAW datasets are not source artifacts.
+WAVECAR
+CHGCAR
+POTCAR

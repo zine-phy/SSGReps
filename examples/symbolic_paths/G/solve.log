@@ -1,0 +1,13 @@
+order=384 H=192 irreps(dim,W)=[ [ 2, 1 ], [ 2, 1 ], [ 2, 1 ], [ 2, 1 ], 
+  [ 4, 1 ], [ 4, 1 ], [ 6, 1 ], [ 6, 1 ], [ 6, 1 ], [ 6, 1 ] ]
+PASS dimension=2 W=1 conductor=24 products=147456
+PASS dimension=2 W=1 conductor=24 products=147456
+PASS dimension=2 W=1 conductor=24 products=147456
+PASS dimension=2 W=1 conductor=24 products=147456
+PASS dimension=4 W=1 conductor=24 products=147456
+PASS dimension=4 W=1 conductor=24 products=147456
+PASS dimension=6 W=1 conductor=8 products=147456
+PASS dimension=6 W=1 conductor=8 products=147456
+PASS dimension=6 W=1 conductor=8 products=147456
+PASS dimension=6 W=1 conductor=8 products=147456
+Finished 10 irreducible coreps; seconds=19.439

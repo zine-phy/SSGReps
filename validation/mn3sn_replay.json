@@ -1,0 +1,91 @@
+{
+  "replay_passed": true,
+  "blocks_passed": 590,
+  "blocks_total": 642,
+  "blocks_unresolved": 52,
+  "distinct_kpoints": 14,
+  "distinct_blocks_total": 582,
+  "distinct_blocks_passed": 530,
+  "point_evaluations": 15,
+  "all_physical_blocks_passed": false,
+  "incomplete_4D_block_rejected": true,
+  "uses_antiunitary_wavefunction_data": false,
+  "leakage_source": "Recorded coefficient calculation; not recomputed by this replay.",
+  "per_point": [
+    [
+      "probe",
+      1,
+      "38/38"
+    ],
+    [
+      "probe",
+      2,
+      "52/60"
+    ],
+    [
+      "probe",
+      3,
+      "41/41"
+    ],
+    [
+      "probe",
+      4,
+      "19/19"
+    ],
+    [
+      "probe",
+      5,
+      "24/30"
+    ],
+    [
+      "probe",
+      6,
+      "21/29"
+    ],
+    [
+      "probe",
+      7,
+      "60/60"
+    ],
+    [
+      "bands",
+      8,
+      "53/59"
+    ],
+    [
+      "bands",
+      23,
+      "54/60"
+    ],
+    [
+      "bands",
+      38,
+      "54/58"
+    ],
+    [
+      "bands",
+      53,
+      "37/38"
+    ],
+    [
+      "bands",
+      68,
+      "21/30"
+    ],
+    [
+      "bands",
+      83,
+      "28/30"
+    ],
+    [
+      "bands",
+      98,
+      "28/30"
+    ],
+    [
+      "bands",
+      107,
+      "60/60"
+    ]
+  ]
+}

@@ -1,0 +1,1 @@
+LABORT = .TRUE. was requested after persistent oscillations. VASP consumed STOPCAR on termination. The stopped SCF was not used as a converged density.

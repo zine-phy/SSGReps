@@ -1,0 +1,58 @@
+{
+  "legacy": {
+    "grid": [
+      84,
+      84,
+      72
+    ],
+    "operations_checked": 48,
+    "max_grid_mapping_roundoff": 1.4210854715202004e-14,
+    "max_abs_invariance_error_n_mx_my_mz": [
+      7.395000000087748e-05,
+      0.0018743616203100726,
+      0.0019198529633995933,
+      0.0020216805182
+    ],
+    "field_max_abs_n_mx_my_mz": [
+      807.58642586,
+      530.86315855,
+      459.87435695,
+      0.0010108402591
+    ],
+    "magnetization_max_vector_norm": 530.8632255687465,
+    "charge_relative_max_error": 9.156914682181293e-08,
+    "magnetic_relative_max_component_error": 3.808288878993358e-06,
+    "mean_charge_raw": 50.000001640823434,
+    "passed": false,
+    "formula": "n(Rr+t)=n(r), m(Rr+t)=(C^T Q C)m(r); Q includes anti parity",
+    "scope": "Saved four real-space fields; excludes complex PAW augmentation matrices"
+  },
+  "ideal_reference": {
+    "grid": [
+      84,
+      84,
+      72
+    ],
+    "operations_checked": 48,
+    "max_grid_mapping_roundoff": 1.4210854715202004e-14,
+    "max_abs_invariance_error_n_mx_my_mz": [
+      1.0000007932831068e-08,
+      1.1253689535806188e-08,
+      1.0722317256295355e-08,
+      0.0
+    ],
+    "field_max_abs_n_mx_my_mz": [
+      807.55570777,
+      530.65607989,
+      459.6930906,
+      0.0
+    ],
+    "magnetization_max_vector_norm": 530.6561450083361,
+    "charge_relative_max_error": 1.238305647104555e-11,
+    "magnetic_relative_max_component_error": 2.1207121865383095e-11,
+    "mean_charge_raw": 50.000001643202474,
+    "passed": true,
+    "formula": "n(Rr+t)=n(r), m(Rr+t)=(C^T Q C)m(r); Q includes anti parity",
+    "scope": "Saved four real-space fields; excludes complex PAW augmentation matrices"
+  }
+}

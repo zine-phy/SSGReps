@@ -1,0 +1,4 @@
+order=64 H=32 irreps(dim,W)=[ [ 4, 1 ], [ 4, 1 ] ]
+PASS dimension=4 W=1 conductor=8 products=4096
+PASS dimension=4 W=1 conductor=8 products=4096
+Finished 2 irreducible coreps; seconds=0.113

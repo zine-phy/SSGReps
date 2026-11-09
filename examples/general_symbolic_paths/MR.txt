@@ -1,0 +1,81 @@
+SSG 221.8.6.3 | k = (1/2, 1/2, t)
+=================================
+Coordinates: reciprocal basis of pure translations.
+Convention: D(g) = exp(-i k_cart.tau_g) M(g); antiunitary operator = D(g) K.
+Operations: 64 | unitary: 32 | dimensions: 4, 4
+Numeric display: 6 significant digits; components below 1e-10 shown as 0.
+Parameter: t; open interval: Interval.open(0, 1/2).
+Symbolic Bloch phases with numerical constant matrices; not fully exact algebraic matrices.
+The family describes the full generic little group only where no excluded operation becomes a symmetry.
+Endpoints require separate point calculations. Operation indices in this report are local to the path group.
+
+Characters: unitary operations only. Identical-value columns merged; these are NOT conjugacy classes.
+
+  rep | dim | g001 | g002 | g003 | g004 | g005 | g006 | g007 | g008 |            g009 |            g010
+------+-----+------+------+------+------+------+------+------+------+-----------------+----------------
+count |   - |    1 |    1 |    1 |    1 |    1 |    1 |    1 |    1 |               1 |               1
+   r1 |   4 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  2*exp(-i*pi*t) |  2*exp(-i*pi*t)
+   r2 |   4 |    4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 | -2*exp(-i*pi*t) | -2*exp(-i*pi*t)
+
+  rep | dim | g011 | g012 |            g013 |            g014 | g015 | g016 | g017 | g018 | g019 | g020
+------+-----+------+------+-----------------+-----------------+------+------+------+------+------+-----
+count |   - |    1 |    1 |               1 |               1 |    1 |    1 |    1 |    1 |    1 |    1
+   r1 |   4 |    0 |    0 |  2*exp(-i*pi*t) | -2*exp(-i*pi*t) |    0 |    0 |    0 |    0 |    0 |    0
+   r2 |   4 |    0 |    0 | -2*exp(-i*pi*t) |  2*exp(-i*pi*t) |    0 |    0 |    0 |    0 |    0 |    0
+
+  rep | dim | g021 | g022 | g023 | g024 | g025 | g026 | g027 | g028 | g029 | g030
+------+-----+------+------+------+------+------+------+------+------+------+-----
+count |   - |    1 |    1 |    1 |    1 |    1 |    1 |    1 |    1 |    1 |    1
+   r1 |   4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0
+   r2 |   4 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |    0
+
+  rep | dim | g031 | g032
+------+-----+------+-----
+count |   - |    1 |    1
+   r1 |   4 |    0 |    0
+   r2 |   4 |    0 |    0
+
+Column membership:
+g001: g001
+g002: g002
+g003: g003
+g004: g004
+g005: g005
+g006: g006
+g007: g007
+g008: g008
+g009: g009
+g010: g010
+g011: g011
+g012: g012
+g013: g013
+g014: g014
+g015: g015
+g016: g016
+g017: g017
+g018: g018
+g019: g019
+g020: g020
+g021: g021
+g022: g022
+g023: g023
+g024: g024
+g025: g025
+g026: g026
+g027: g027
+g028: g028
+g029: g029
+g030: g030
+g031: g031
+g032: g032
+
+
+r1 | dimension 4 | g003 | unitary
+R = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]; tau = [1, 0, 1]
+spin = [[-1, 0, 0], [0, 1, 0], [0, 0, -1]]
+D(g003) = -i*exp(-i*pi*t) * matrix
+                       1                    2                     3                     4
+1 |            0.707107i                    0                     0 -0.704443 + 0.061321i |
+2 |                    0            0.707107i -0.597091 + 0.378791i                     0 |
+3 |                    0 0.597091 + 0.378791i            -0.707107i                     0 |
+4 | 0.704443 + 0.061321i                    0                     0            -0.707107i |

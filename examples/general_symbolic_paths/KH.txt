@@ -1,0 +1,26 @@
+SSG 194.1.6.1.P | k = (1/3, 1/3, t)
+===================================
+Coordinates: reciprocal basis of pure translations.
+Convention: D(g) = exp(-i k_cart.tau_g) M(g); antiunitary operator = D(g) K.
+Operations: 12 | unitary: 6 | dimensions: 1, 1, 2
+Numeric display: 6 significant digits; components below 1e-10 shown as 0.
+Parameter: t; open interval: Interval.open(0, 1/2).
+Symbolic Bloch phases with numerical constant matrices; not fully exact algebraic matrices.
+The family describes the full generic little group only where no excluded operation becomes a symmetry.
+Endpoints require separate point calculations. Operation indices in this report are local to the path group.
+
+Characters: unitary operations only.
+
+  rep | dim | g001 | g002 | g003 |           g004 |           g005 |           g006
+------+-----+------+------+------+----------------+----------------+---------------
+count |   - |    1 |    1 |    1 |              1 |              1 |              1
+   r1 |   1 |    1 |   -1 |   -1 | -i*exp(i*pi*t) |  i*exp(i*pi*t) |  i*exp(i*pi*t)
+   r2 |   1 |    1 |   -1 |   -1 |  i*exp(i*pi*t) | -i*exp(i*pi*t) | -i*exp(i*pi*t)
+   r3 |   2 |    2 |    1 |    1 |              0 |              0 |              0
+
+r1 | dimension 1 | g004 | unitary
+R = [[0, 1, 0], [1, 0, 0], [0, 0, 1]]; tau = [0, 0, -0.5]
+spin = [[1, 0, 0], [0, -1, 0], [0, 0, -1]]
+D(g004) = exp(i*pi*t) * matrix
+     1
+1 | -i |

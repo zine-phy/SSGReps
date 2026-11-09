@@ -1,0 +1,9 @@
+{
+  "exact_factoring_and_character_checks": 984,
+  "compressed_character_columns": 6,
+  "unitary_operations_accounted_for": 192,
+  "antiunitary_character_columns": 0,
+  "numeric_nonmutation": true,
+  "wide_matrix_pagination": true,
+  "maximum_text_width": 110
+}

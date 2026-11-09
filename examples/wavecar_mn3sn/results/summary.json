@@ -1,0 +1,28 @@
+{
+  "ssg": "194.1.6.1.P",
+  "blocks_passed": 590,
+  "blocks_total": 642,
+  "blocks_unresolved": 52,
+  "point_evaluations": 15,
+  "uses_antiunitary_wavefunction_data": false,
+  "A_point_blocks_passed": 19,
+  "A_point_blocks_total": 19,
+  "A_point_max_character_residual": 2.257644575731632e-07,
+  "A_point_max_product_residual": 2.2409253367877576e-06,
+  "A_point_max_leakage": 0.0009935546408875765,
+  "A_point_example": {
+    "band_start": 53,
+    "band_end": 56,
+    "dimension": 4,
+    "energy_relative_eV": 0.2108404417510208,
+    "label": "r3",
+    "character_residual": 6.432447560711382e-09,
+    "leakage": 0.0006617463340831029,
+    "product_residual": 8.927046631676546e-07
+  },
+  "all_blocks_passed": false,
+  "distinct_kpoints": 14,
+  "distinct_blocks_total": 582,
+  "distinct_blocks_passed": 530,
+  "generic_point_independent_repeat_passed": 60
+}

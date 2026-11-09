@@ -1,0 +1,25 @@
+{
+  "ssg": "194.1.6.1.P",
+  "full_order": 48,
+  "unitary_order": 24,
+  "spin_rotation": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      -1.2246467991473532e-16
+    ],
+    [
+      0.0,
+      1.2246467991473532e-16,
+      -1.0
+    ]
+  ],
+  "spin_operation_residual": 5.551115123125783e-16,
+  "position_covariance_residual": 5.551115123125783e-16,
+  "moment_covariance_residual_muB": 1.1794114094941452e-15
+}

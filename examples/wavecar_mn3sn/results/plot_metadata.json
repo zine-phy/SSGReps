@@ -1,0 +1,17 @@
+{
+  "font": "TimesNewRoman/Roman.ttf",
+  "points": 106,
+  "bands": 96,
+  "fermi_eV": 6.192,
+  "path": [
+    "G",
+    "M",
+    "K",
+    "G",
+    "A",
+    "L",
+    "H",
+    "A"
+  ],
+  "general_point_excluded_from_path": true
+}

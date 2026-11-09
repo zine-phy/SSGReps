@@ -1,0 +1,236 @@
+[
+  {
+    "name": "GX",
+    "u": [
+      "0",
+      "0",
+      "0"
+    ],
+    "v": [
+      "1",
+      "0",
+      "0"
+    ],
+    "interval": [
+      "0",
+      "1/2"
+    ],
+    "endpoints": [
+      "G",
+      "X"
+    ],
+    "order": 64,
+    "unitary_order": 32,
+    "endpoint_orders": [
+      384,
+      128
+    ]
+  },
+  {
+    "name": "GM",
+    "u": [
+      "0",
+      "0",
+      "0"
+    ],
+    "v": [
+      "1",
+      "1",
+      "0"
+    ],
+    "interval": [
+      "0",
+      "1/2"
+    ],
+    "endpoints": [
+      "G",
+      "M"
+    ],
+    "order": 32,
+    "unitary_order": 16,
+    "endpoint_orders": [
+      384,
+      128
+    ]
+  },
+  {
+    "name": "GR",
+    "u": [
+      "0",
+      "0",
+      "0"
+    ],
+    "v": [
+      "1",
+      "1",
+      "1"
+    ],
+    "interval": [
+      "0",
+      "1/2"
+    ],
+    "endpoints": [
+      "G",
+      "R"
+    ],
+    "order": 48,
+    "unitary_order": 24,
+    "endpoint_orders": [
+      384,
+      384
+    ]
+  },
+  {
+    "name": "XM",
+    "u": [
+      "1/2",
+      "0",
+      "0"
+    ],
+    "v": [
+      "0",
+      "1",
+      "0"
+    ],
+    "interval": [
+      "0",
+      "1/2"
+    ],
+    "endpoints": [
+      "X",
+      "M"
+    ],
+    "order": 32,
+    "unitary_order": 16,
+    "endpoint_orders": [
+      128,
+      128
+    ]
+  },
+  {
+    "name": "MR",
+    "u": [
+      "1/2",
+      "1/2",
+      "0"
+    ],
+    "v": [
+      "0",
+      "0",
+      "1"
+    ],
+    "interval": [
+      "0",
+      "1/2"
+    ],
+    "endpoints": [
+      "M",
+      "R"
+    ],
+    "order": 64,
+    "unitary_order": 32,
+    "endpoint_orders": [
+      128,
+      384
+    ]
+  },
+  {
+    "name": "XR",
+    "u": [
+      "1/2",
+      "0",
+      "0"
+    ],
+    "v": [
+      "0",
+      "1",
+      "1"
+    ],
+    "interval": [
+      "0",
+      "1/2"
+    ],
+    "endpoints": [
+      "X",
+      "R"
+    ],
+    "order": 32,
+    "unitary_order": 16,
+    "endpoint_orders": [
+      128,
+      384
+    ]
+  },
+  {
+    "name": "G",
+    "u": [
+      "0",
+      "0",
+      "0"
+    ],
+    "v": [
+      "0",
+      "0",
+      "0"
+    ],
+    "interval": null,
+    "endpoints": null,
+    "order": 384,
+    "unitary_order": 192,
+    "endpoint_orders": []
+  },
+  {
+    "name": "X",
+    "u": [
+      "1/2",
+      "0",
+      "0"
+    ],
+    "v": [
+      "0",
+      "0",
+      "0"
+    ],
+    "interval": null,
+    "endpoints": null,
+    "order": 128,
+    "unitary_order": 64,
+    "endpoint_orders": []
+  },
+  {
+    "name": "M",
+    "u": [
+      "1/2",
+      "1/2",
+      "0"
+    ],
+    "v": [
+      "0",
+      "0",
+      "0"
+    ],
+    "interval": null,
+    "endpoints": null,
+    "order": 128,
+    "unitary_order": 64,
+    "endpoint_orders": []
+  },
+  {
+    "name": "R",
+    "u": [
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    "v": [
+      "0",
+      "0",
+      "0"
+    ],
+    "interval": null,
+    "endpoints": null,
+    "order": 384,
+    "unitary_order": 192,
+    "endpoint_orders": []
+  }
+]

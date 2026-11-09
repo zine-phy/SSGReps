@@ -1,0 +1,65 @@
+{
+  "ssg": "221.8.6.3",
+  "dimension": 16,
+  "order": 384,
+  "unitary_order": 192,
+  "extension_order": 384,
+  "exact_products_checked": 147456,
+  "unitary_checks": 384,
+  "H_character_norm": 1,
+  "partner_overlap": 0,
+  "Wigner_index": 0,
+  "corep_indicator": 1,
+  "generator_indices_1based": [
+    2,
+    3,
+    4,
+    5,
+    97
+  ],
+  "conductor": 12,
+  "k_pure_translation_reciprocal": [
+    "1/2",
+    "1/2",
+    "1/2"
+  ],
+  "k_conventional_reciprocal": [
+    "1/4",
+    "1/4",
+    "1/4"
+  ],
+  "group_type": "double",
+  "source_commit": "97e839509ec1a7f08af68b047f75aad0c71468b7",
+  "group_data_certification": {
+    "associativity_triples": 56623104,
+    "cocycle_triples": 56623104,
+    "exact_SU2_pair_signs": 147456,
+    "arithmetic": "integer geometry and symbolic SU(2) lifts"
+  },
+  "numeric_cross_check": {
+    "ssg": "221.8.6.3",
+    "k": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "dimensions": [
+      8,
+      8,
+      16
+    ],
+    "double_valued": true,
+    "numerical_product_frobenius": 4.471231662788574e-16,
+    "numerical_unitarity_frobenius": 3.534685957192913e-16,
+    "character_match_max": 7.105428426990384e-15,
+    "construction": "exact central extension, induced module and projector, Wigner pairing",
+    "note": "Numerical validation is secondary; GAP verifies every relation exactly."
+  },
+  "versions": {
+    "GAP": "4.16.1",
+    "Python": "3.9.6",
+    "numpy": "1.26.4",
+    "sympy": "1.14.0"
+  },
+  "clean_rebuild_identical": true
+}

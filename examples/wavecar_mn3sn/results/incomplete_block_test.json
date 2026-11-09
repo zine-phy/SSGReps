@@ -1,0 +1,10 @@
+{
+  "source_bands": [
+    53,
+    56
+  ],
+  "test": "Keep only two basis vectors from the measured four-dimensional A-point block.",
+  "rejected_by_characters": true,
+  "unitarity_residual": 1.0985928325847911,
+  "passed": true
+}

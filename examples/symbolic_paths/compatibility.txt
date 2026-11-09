@@ -1,0 +1,63 @@
+G -> GX
+  r1(2D) = 1 x r2(2D)
+  r2(2D) = 1 x r4(2D)
+  r3(2D) = 1 x r1(2D)
+  r4(2D) = 1 x r3(2D)
+  r5(4D) = 1 x r2(2D) + 1 x r4(2D)
+  r6(4D) = 1 x r1(2D) + 1 x r3(2D)
+  r7(6D) = 1 x r3(2D) + 1 x r5(4D)
+  r8(6D) = 1 x r1(2D) + 1 x r5(4D)
+  r9(6D) = 1 x r4(2D) + 1 x r5(4D)
+  r10(6D) = 1 x r2(2D) + 1 x r5(4D)
+X -> GX
+  r1(8D) = 2 x r5(4D)
+  r2(4D) = 1 x r1(2D) + 1 x r2(2D)
+  r3(4D) = 1 x r3(2D) + 1 x r4(2D)
+G -> GM
+  r1(2D) = 1 x r2(2D)
+  r2(2D) = 1 x r4(2D)
+  r3(2D) = 1 x r1(2D)
+  r4(2D) = 1 x r3(2D)
+  r5(4D) = 1 x r2(2D) + 1 x r4(2D)
+  r6(4D) = 1 x r1(2D) + 1 x r3(2D)
+  r7(6D) = 1 x r1(2D) + 1 x r2(2D) + 1 x r3(2D)
+  r8(6D) = 1 x r1(2D) + 1 x r3(2D) + 1 x r4(2D)
+  r9(6D) = 1 x r1(2D) + 1 x r2(2D) + 1 x r4(2D)
+  r10(6D) = 1 x r2(2D) + 1 x r3(2D) + 1 x r4(2D)
+M -> GM
+  r1(8D) = 1 x r1(2D) + 1 x r2(2D) + 1 x r3(2D) + 1 x r4(2D)
+G -> GR
+  r1(2D) = 1 x r1(2D)
+  r2(2D) = 1 x r2(2D)
+  r3(2D) = 1 x r2(2D)
+  r4(2D) = 1 x r1(2D)
+  r5(4D) = 1 x r3(4D)
+  r6(4D) = 1 x r3(4D)
+  r7(6D) = 1 x r1(2D) + 1 x r3(4D)
+  r8(6D) = 1 x r2(2D) + 1 x r3(4D)
+  r9(6D) = 1 x r2(2D) + 1 x r3(4D)
+  r10(6D) = 1 x r1(2D) + 1 x r3(4D)
+R -> GR
+  r1(8D) = 2 x r3(4D)
+  r2(8D) = 2 x r3(4D)
+  r3(16D) = 2 x r1(2D) + 2 x r2(2D) + 2 x r3(4D)
+X -> XM
+  r1(8D) = 2 x r1(4D)
+  r2(4D) = 1 x r1(4D)
+  r3(4D) = 1 x r1(4D)
+M -> XM
+  r1(8D) = 2 x r1(4D)
+M -> MR
+  r1(8D) = 1 x r1(4D) + 1 x r2(4D)
+R -> MR
+  r1(8D) = 2 x r1(4D)
+  r2(8D) = 2 x r2(4D)
+  r3(16D) = 2 x r1(4D) + 2 x r2(4D)
+X -> XR
+  r1(8D) = 2 x r1(4D)
+  r2(4D) = 1 x r1(4D)
+  r3(4D) = 1 x r1(4D)
+R -> XR
+  r1(8D) = 2 x r1(4D)
+  r2(8D) = 2 x r1(4D)
+  r3(16D) = 4 x r1(4D)

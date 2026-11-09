@@ -1,0 +1,646 @@
+{
+  "GX": {
+    "G": {
+      "line_labels": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "line_dimensions": [
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r4",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r5",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r6",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r7",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r8",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r9",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r10",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "X": {
+      "line_labels": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "line_dimensions": [
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "GM": {
+    "G": {
+      "line_labels": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "line_dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r4",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r5",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r6",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r7",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r8",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r9",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r10",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "M": {
+      "line_labels": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "line_dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  "GR": {
+    "G": {
+      "line_labels": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "line_dimensions": [
+        2,
+        2,
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r4",
+          "endpoint_dimension": 2,
+          "multiplicities": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r5",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r6",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r7",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r8",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r9",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r10",
+          "endpoint_dimension": 6,
+          "multiplicities": [
+            1,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "R": {
+      "line_labels": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "line_dimensions": [
+        2,
+        2,
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 16,
+          "multiplicities": [
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  "XM": {
+    "X": {
+      "line_labels": [
+        "r1"
+      ],
+      "line_dimensions": [
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            1
+          ]
+        }
+      ]
+    },
+    "M": {
+      "line_labels": [
+        "r1"
+      ],
+      "line_dimensions": [
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            2
+          ]
+        }
+      ]
+    }
+  },
+  "MR": {
+    "M": {
+      "line_labels": [
+        "r1",
+        "r2"
+      ],
+      "line_dimensions": [
+        4,
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "R": {
+      "line_labels": [
+        "r1",
+        "r2"
+      ],
+      "line_dimensions": [
+        4,
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            2,
+            0
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            0,
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 16,
+          "multiplicities": [
+            2,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  "XR": {
+    "X": {
+      "line_labels": [
+        "r1"
+      ],
+      "line_dimensions": [
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            1
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 4,
+          "multiplicities": [
+            1
+          ]
+        }
+      ]
+    },
+    "R": {
+      "line_labels": [
+        "r1"
+      ],
+      "line_dimensions": [
+        4
+      ],
+      "branches": [
+        {
+          "endpoint_label": "r1",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r2",
+          "endpoint_dimension": 8,
+          "multiplicities": [
+            2
+          ]
+        },
+        {
+          "endpoint_label": "r3",
+          "endpoint_dimension": 16,
+          "multiplicities": [
+            4
+          ]
+        }
+      ]
+    }
+  }
+}
